@@ -1153,37 +1153,31 @@ ol {
 
 @media (min-width: 1024px) {
   .cycle-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--space-12);
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
   }
-
   .cycle-step {
-    position: absolute;
+    position: relative;
     pointer-events: auto;
-    width: 300px;
+    width: 320px;
+    max-width: 90vw;
+    min-width: 240px;
+    min-height: 180px;
+    margin: 0;
   }
-
-  .step-1 {
-    top: -20px;
-    left: -40px;
-  }
-
-  .step-2 {
-    top: -20px;
-    right: -40px;
-  }
-
-  .step-3 {
-    bottom: -20px;
-    left: -40px;
-  }
-
-  .step-4 {
-    bottom: -20px;
-    right: -40px;
-  }
+  .cycle-step[data-step="0"] { grid-area: 1 / 1; align-self: end; justify-self: end; }
+  .cycle-step[data-step="1"] { grid-area: 1 / 2; align-self: end; justify-self: start; }
+  .cycle-step[data-step="2"] { grid-area: 2 / 2; align-self: start; justify-self: start; }
+  .cycle-step[data-step="3"] { grid-area: 2 / 1; align-self: start; justify-self: end; }
 }
 
 .cycle-step {
@@ -3390,4 +3384,48 @@ select.glass-input option {
 .mobile-nav-group.expanded .mobile-nav-chevron {
   transform: rotate(180deg);
   opacity: 1;
+}
+
+/* Founder Photo Styling */
+.founder-photo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 24px;
+}
+
+.founder-photo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.founder-photo {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .founder-photo-wrapper {
+    margin: 0 auto 16px;
+  }
+  
+  .founder-photo-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .founder-photo {
+    width: 180px;
+    height: 180px;
+  }
 }
