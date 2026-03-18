@@ -1,4 +1,4 @@
 # Cloudflare Pages redirects and routing
 
-# Catch-all for 404 pages
-/* /404.html 404
+# Serve 404 page for missing files (status 200 for SPA compatibility)
+/* /404.html 200

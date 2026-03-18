@@ -1,9 +1,10 @@
 name = "z3connectwebsitenew"
 compatibility_date = "2024-12-19"
-
-[site]
-bucket = "."
+pages_build_output_dir = "."
 
 [build]
 command = ""
 cwd = "."
+
+[env.production]
+vars = { ENVIRONMENT = "production" }

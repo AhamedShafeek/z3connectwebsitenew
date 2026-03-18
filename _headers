@@ -8,32 +8,39 @@
 
 /css/*
   Cache-Control: public, immutable, max-age=31536000
-  Content-Type: text/css; charset=utf-8
 
 /js/*
   Cache-Control: public, immutable, max-age=31536000
-  Content-Type: application/javascript; charset=utf-8
 
 /image/*
   Cache-Control: public, max-age=604800
-  Content-Type: image/*
 
 /fonts/*
   Cache-Control: public, immutable, max-age=31536000
 
 *.woff
+  Cache-Control: public, immutable, max-age=31536000
+
 *.woff2
   Cache-Control: public, immutable, max-age=31536000
-  Content-Type: font/woff2
-
-/404.html
-  Cache-Control: public, max-age=0, must-revalidate
-  Status: 404
 
 /index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /about.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /products.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /portfolio.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /work.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /contact.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/404.html
   Cache-Control: public, max-age=0, must-revalidate
