@@ -1,0 +1,9 @@
+name = "z3connectwebsitenew"
+compatibility_date = "2024-12-19"
+
+[site]
+bucket = "."
+
+[build]
+command = ""
+cwd = "."
