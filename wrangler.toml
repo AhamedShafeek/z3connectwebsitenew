@@ -1,13 +1,9 @@
 name = "z3connectwebsitenew"
-main = "index.html"
 compatibility_date = "2024-12-19"
 
-[env.production]
-name = "z3connectwebsitenew"
+[site]
+bucket = "."
 
 [build]
 command = ""
 cwd = "."
-
-[site]
-bucket = "z3connectwebsite-main"

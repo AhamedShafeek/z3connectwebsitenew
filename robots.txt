@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://z3connect.com/sitemap.xml
+
+# Z3Connect — AI-driven software for businesses
