@@ -1,4 +1,4 @@
 # Cloudflare Pages redirects and routing
 
-# Serve 404 page for missing files (status 200 for SPA compatibility)
-/* /404.html 200
+# Serve custom 404 page for missing files
+/* /404.html 404
