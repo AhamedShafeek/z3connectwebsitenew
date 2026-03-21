@@ -201,22 +201,66 @@
     <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
   </div>
 
-  <section class="philosophy-hero-section">
-    <div class="absolute inset-0 bg-gradient-radial from-purple-900/20 via-black to-black"></div>
+  <!-- ============================================
+       SECTION 1: HERO — Philosophy
+       ============================================ -->
+  <section class="about-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
 
-    <div class="max-w-5xl mx-auto relative z-10">
-      <h1 class="font-display text-5xl sm-text-6xl md-text-8xl font-bold mb-16 leading-none text-center">
-        <span class="block opacity-0 animate-reveal" style="animation-delay: 0.2s;">Our</span>
-        <span class="block text-gradient opacity-0 animate-reveal" style="animation-delay: 0.4s;">Philosophy</span>
-      </h1>
+    <div style="position: relative; z-index: 2;">
+      <p class="about-hero-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0114 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+        Our Philosophy
+      </p>
 
-      <div class="glass rounded-2xl p-10 md-p-16 text-center opacity-0 animate-reveal" style="animation-delay: 0.6s;">
-        <p class="text-3xl md-text-4xl font-display font-semibold leading-tight mb-6">
-          Execution over everything.
-        </p>
-        <p class="text-xl md-text-2xl opacity-80 font-script">
-          Build fast. Ship faster. Iterate based on impact.
-        </p>
+      <h1>Execution Over Everything</h1>
+
+      <p class="about-hero-desc">
+        We believe the best ideas mean nothing without execution. Speed, simplicity, and relentless focus on real-world impact drive everything we build.
+      </p>
+
+      <a href="contact.html" class="btn btn-solid about-hero-cta">Let's Build Together</a>
+
+      <!-- Geometric Artwork -->
+      <div class="geo-art">
+        <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="geoGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(37, 99, 235, 0.15)" />
+              <stop offset="100%" stop-color="transparent" />
+            </radialGradient>
+          </defs>
+
+          <!-- Center glow -->
+          <ellipse cx="350" cy="180" rx="250" ry="100" class="geo-glow" />
+
+          <!-- Vertical lines -->
+          <line x1="80" y1="20" x2="80" y2="260" class="geo-line geo-line-animated" />
+          <line x1="120" y1="50" x2="120" y2="260" class="geo-line geo-line-animated" />
+          <line x1="160" y1="30" x2="160" y2="260" class="geo-line geo-line-animated" />
+          <line x1="200" y1="60" x2="200" y2="260" class="geo-line geo-line-animated" />
+          <line x1="240" y1="40" x2="240" y2="260" class="geo-line geo-line-animated" />
+          <line x1="500" y1="20" x2="500" y2="260" class="geo-line geo-line-animated" />
+          <line x1="540" y1="50" x2="540" y2="260" class="geo-line geo-line-animated" />
+          <line x1="580" y1="30" x2="580" y2="260" class="geo-line geo-line-animated" />
+          <line x1="620" y1="60" x2="620" y2="260" class="geo-line geo-line-animated" />
+
+          <!-- Circles -->
+          <circle cx="280" cy="160" r="60" class="geo-circle" />
+          <circle cx="350" cy="140" r="70" class="geo-circle" />
+          <circle cx="420" cy="160" r="60" class="geo-circle" />
+          <circle cx="315" cy="180" r="50" class="geo-circle" />
+          <circle cx="385" cy="180" r="50" class="geo-circle" />
+          <circle cx="350" cy="200" r="40" class="geo-circle" />
+
+          <!-- Horizontal base line -->
+          <line x1="50" y1="260" x2="650" y2="260" class="geo-line" style="opacity: 0.3;" />
+        </svg>
       </div>
     </div>
   </section>
