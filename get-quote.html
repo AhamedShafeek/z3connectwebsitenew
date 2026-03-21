@@ -33,6 +33,82 @@
   }
   </script>
 
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://z3connect.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Get Quote",
+        "item": "https://z3connect.com/get-quote"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Service Quote Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Software Development Quote",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Z3Connect",
+      "url": "https://z3connect.com"
+    },
+    "description": "Get a free quote for your custom software project including POS systems, booking platforms, and AI automation",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "serviceType": "Software Development"
+  }
+  </script>
+
+  <!-- FAQ Schema for Quote Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to get a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We typically provide a free quote within 24-48 hours of receiving your project details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the quote free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our quotes are completely free. We provide detailed and transparent pricing for your project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What information do you need for a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We need details about your project scope, features required, timeline, and budget. The more details you provide, the more accurate the quote."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
