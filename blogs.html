@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>Vlogs — Z3Connect Community Learning Hub</title>
+  <title>Blogs — Z3Connect Community Learning Hub</title>
   <meta name="description"
     content="Watch our vlogs on software development, AI, business automation, and tech insights. Learn from Z3Connect's tech journey and industry expertise.">
   <meta name="author" content="Z3Connect">
@@ -14,8 +14,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://z3connect.com/vlogs.html">
-  <meta property="og:title" content="Vlogs — Z3Connect Community Learning Hub">
+  <meta property="og:url" content="https://z3connect.com/blogs.html">
+  <meta property="og:title" content="Blogs — Z3Connect Community Learning Hub">
   <meta property="og:description" content="Tech tutorials, insights, and business automation stories from Z3Connect.">
   <meta property="og:image" content="https://z3connect.com/image/z3connect-og.png">
 
@@ -40,31 +40,33 @@
   <link rel="manifest" href="manifest.json">
 
   <style>
-    .vlog-container {
+    .blog-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2.5rem;
       margin-top: 3rem;
     }
 
-    .vlog-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
+    .blog-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
       overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
     }
 
-    .vlog-card:hover {
-      background: rgba(255, 255, 255, 0.08);
+    .blog-card:hover {
+      background: rgba(255, 255, 255, 0.06);
       border-color: rgba(37, 99, 235, 0.3);
-      transform: translateY(-4px);
+      transform: translateY(-8px);
     }
 
-    .vlog-thumbnail {
+    .blog-thumbnail {
       width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(34, 197, 94, 0.1));
+      height: 220px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.05));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -72,256 +74,99 @@
       overflow: hidden;
     }
 
-    .vlog-thumbnail svg {
-      width: 60px;
-      height: 60px;
-      opacity: 0.5;
+    .blog-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .vlog-thumbnail.has-image {
-      background-size: cover;
-      background-position: center;
+    .blog-card:hover .blog-thumbnail img {
+        transform: scale(1.05);
+        opacity: 1;
     }
 
-    .play-button {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border: 2px solid white;
-      border-radius: 50%;
+    .blog-info {
+      padding: 2rem;
+      flex-grow: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s;
+      flex-direction: column;
     }
 
-    .vlog-card:hover .play-button {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.1);
-    }
-
-    .play-button::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 12px solid white;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      margin-left: 3px;
-    }
-
-    .vlog-info {
-      padding: 1.5rem;
-    }
-
-    .vlog-title {
-      font-size: 1.1rem;
+    .blog-title {
+      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       color: white;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      line-height: 1.3;
     }
 
-    .vlog-meta {
+    .blog-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-category {
+      color: #3b82f6;
+      font-weight: 600;
+    }
+
+    .blog-description {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .blog-footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 1rem;
-    }
-
-    .vlog-category {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.2);
-      color: #60a5fa;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-
-    .vlog-description {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 1rem;
-      line-height: 1.4;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .vlog-author {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding-top: 1rem;
+      padding-top: 1.5rem;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .vlog-author-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2563EB, #22C55E);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .read-more {
+      color: white;
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: 0.75rem;
-    }
-
-    .vlog-author-info small {
-      display: block;
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .upload-section {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.05));
-      border: 2px dashed rgba(37, 99, 235, 0.3);
-      border-radius: 16px;
-      padding: 3rem 2rem;
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .upload-section h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .upload-section p {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 1.5rem;
-    }
-
-    .upload-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      color: white;
-      font-family: inherit;
-      font-size: 0.9rem;
-      transition: all 0.3s;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(37, 99, 235, 0.5);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .file-input-wrapper {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-    }
-
-    .file-input-label {
+      text-decoration: none;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 0.5rem;
-      padding: 1rem;
-      background: rgba(37, 99, 235, 0.1);
-      border: 2px solid rgba(37, 99, 235, 0.3);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
+      transition: gap 0.3s;
     }
 
-    .file-input-label:hover {
-      background: rgba(37, 99, 235, 0.15);
-      border-color: rgba(37, 99, 235, 0.5);
-    }
-
-    .file-input-label input {
-      display: none;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 1rem;
-      background: linear-gradient(135deg, #2563EB, #1e40af);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-size: 1rem;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    .read-more:hover {
+      gap: 0.75rem;
+      color: #3b82f6;
     }
 
     .hero-section {
-      padding: 6rem 2rem;
+      padding: 8rem 2rem 6rem;
       text-align: center;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.05));
-      border-radius: 16px;
-      margin-bottom: 3rem;
+      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
     }
 
     .hero-section h1 {
-      font-size: clamp(2rem, 5vw, 4rem);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
       font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
     }
 
     .hero-section p {
       font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.7);
-      max-width: 600px;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 700px;
       margin: 0 auto;
     }
   </style>
@@ -416,7 +261,7 @@
               </svg></span><span><strong>Clients</strong><small>100+ businesses we've powered</small></span></a>
         </div>
       </div>
-      <a href="vlogs.html" class="nav-link">Vlogs</a>
+      <a href="blogs.html" class="nav-link">Blogs</a>
       <a href="contact.html" class="nav-link">Contact</a>
       <a href="get-quote.html" class="nav-cta">Get quote</a>
     </div>
@@ -469,159 +314,86 @@
           <a href="clients.html" class="mobile-menu-sublink">Clients</a>
         </div>
       </div>
-      <a href="vlogs.html" class="mobile-menu-link">Vlogs</a>
+      <a href="blogs.html" class="mobile-menu-link">Blogs</a>
       <a href="contact.html" class="mobile-menu-link">Contact</a>
     </div>
     <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
   </div>
 
   <!-- Hero Section -->
-  <section class="hero-section" style="margin-top: 120px;">
-    <h1>Z3Connect Vlogs</h1>
-    <p>Learn from our tech journey, industry insights, and software development stories</p>
+  <section class="hero-section">
+    <h1>Z3Connect Blogs</h1>
+    <p>Insights, stories, and innovation from the forefront of business automation and AI.</p>
   </section>
 
   <!-- Main Content -->
-  <main style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+  <main style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; margin-bottom: 8rem;">
 
-    <!-- Featured Videos Section -->
+    <!-- Featured Posts Section -->
     <section>
-      <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Featured Vlogs</h2>
-      <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 2rem;">Curated stories from our tech journey</p>
-      
-      <div class="vlog-container">
-        <div class="vlog-card">
-          <div class="vlog-thumbnail">
-            <div class="play-button"></div>
+      <div class="blog-container">
+        <!-- Post 1 -->
+        <div class="blog-card" data-aos="fade-up">
+          <div class="blog-thumbnail">
+            <img src="image/retail.png" alt="AI in Retail">
           </div>
-          <div class="vlog-info">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-              <h3 class="vlog-title">Building AI-Powered POS System</h3>
-              <span class="vlog-category">AI/Tech</span>
+          <div class="blog-info">
+            <div class="blog-meta">
+              <span class="blog-category">Technology</span>
+              <span>•</span>
+              <span>March 22, 2026</span>
             </div>
-            <div class="vlog-meta">
-              <span>8 min</span>
-              <span>2 weeks ago</span>
-            </div>
-            <p class="vlog-description">Deep dive into how we built an intelligent POS system that learns from transaction patterns.</p>
-            <div class="vlog-author">
-              <div class="vlog-author-avatar">Z3</div>
-              <div class="vlog-author-info">
-                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
-                <small>1,234 views</small>
-              </div>
+            <h3 class="blog-title">The Future of AI in MSME Operations</h3>
+            <p class="blog-description">How artificial intelligence is leveling the playing field for small and medium enterprises, enabling enterprise-grade efficiency on a local scale.</p>
+            <div class="blog-footer">
+               <a href="#" class="read-more">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="vlog-card">
-          <div class="vlog-thumbnail">
-            <div class="play-button"></div>
+        <!-- Post 2 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="blog-thumbnail">
+            <img src="image/billing_system.png" alt="Custom Software">
           </div>
-          <div class="vlog-info">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-              <h3 class="vlog-title">MSME Software Automation Guide</h3>
-              <span class="vlog-category">Business</span>
+          <div class="blog-info">
+            <div class="blog-meta">
+              <span class="blog-category">Business</span>
+              <span>•</span>
+              <span>March 15, 2026</span>
             </div>
-            <div class="vlog-meta">
-              <span>12 min</span>
-              <span>1 month ago</span>
-            </div>
-            <p class="vlog-description">Step-by-step guide on how small businesses can automate their operations without technical expertise.</p>
-            <div class="vlog-author">
-              <div class="vlog-author-avatar">Z3</div>
-              <div class="vlog-author-info">
-                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
-                <small>856 views</small>
-              </div>
+            <h3 class="blog-title">Why Custom Software Beats Off-the-Shelf SaaS</h3>
+            <p class="blog-description">Exploring the hidden costs of generic software and how tailored solutions provide a definitive competitive advantage for growing brands.</p>
+            <div class="blog-footer">
+               <a href="#" class="read-more">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="vlog-card">
-          <div class="vlog-thumbnail">
-            <div class="play-button"></div>
+        <!-- Post 3 -->
+        <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="blog-thumbnail">
+            <img src="image/visionary.png" alt="Data Standardization">
           </div>
-          <div class="vlog-info">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
-              <h3 class="vlog-title">From Nagercoil to Enterprise SaaS</h3>
-              <span class="vlog-category">Story</span>
+          <div class="blog-info">
+            <div class="blog-meta">
+              <span class="blog-category">Strategy</span>
+              <span>•</span>
+              <span>March 08, 2026</span>
             </div>
-            <div class="vlog-meta">
-              <span>15 min</span>
-              <span>1 month ago</span>
-            </div>
-            <p class="vlog-description">Our journey building enterprise-grade software from a small town in Tamil Nadu.</p>
-            <div class="vlog-author">
-              <div class="vlog-author-avatar">Z3</div>
-              <div class="vlog-author-info">
-                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
-                <small>2,103 views</small>
-              </div>
+            <h3 class="blog-title">Standardizing Your Business Data for Growth</h3>
+            <p class="blog-description">A guide to transforming fragmented business data into a unified, actionable asset that drives predictable scaling and better decision-making.</p>
+            <div class="blog-footer">
+               <a href="#" class="read-more">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Community Upload Section -->
-    <section>
-      <div class="upload-section">
-        <h3>📹 Share Your Story</h3>
-        <p>Got a tech story, tutorial, or business tip? Upload and share with our community</p>
-        
-        <form class="upload-form" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="title">Vlog Title *</label>
-            <input type="text" id="title" name="title" placeholder="E.g., How I Automated My Inventory..." required>
-          </div>
-
-          <div class="form-group">
-            <label for="category">Category *</label>
-            <select id="category" name="category" required>
-              <option value="">Select a category</option>
-              <option value="tutorial">Tutorial</option>
-              <option value="business">Business Tips</option>
-              <option value="story">Success Story</option>
-              <option value="tech">Tech Insights</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="description">Description *</label>
-            <textarea id="description" name="description" placeholder="Describe your vlog content..." required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="video">Upload Video File *</label>
-            <div class="file-input-wrapper">
-              <label class="file-input-label">
-                <span>📎 Click to select video or drag here</span>
-                <input type="file" id="video" name="video" accept="video/*" required>
-              </label>
-            </div>
-            <small style="display: block; margin-top: 0.5rem; color: rgba(255, 255, 255, 0.5);">Max 500MB | Supported: MP4, WebM, MOV</small>
-          </div>
-
-          <div class="form-group">
-            <label for="creator">Your Name *</label>
-            <input type="text" id="creator" name="creator" placeholder="Your name or channel name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-          </div>
-
-          <button type="submit" class="submit-btn">Upload Vlog</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- More Vlogs -->
+    <!-- More Blogs -->
     <section style="margin-top: 4rem;">
-      <h2 style="font-size: 2rem; margin-bottom: 2rem;">All Vlogs</h2>
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">All Blogs</h2>
       <div class="vlog-container">
         <div class="vlog-card">
           <div class="vlog-thumbnail">
@@ -748,7 +520,7 @@
             <li><a href="work.html">Featured cases</a></li>
             <li><a href="case-studies.html">Case studies</a></li>
             <li><a href="clients.html">Clients</a></li>
-            <li><a href="vlogs.html">Vlogs</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
           </ul>
         </div>
 
