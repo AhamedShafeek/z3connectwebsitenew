@@ -1,0 +1,46 @@
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+/css/*
+  Cache-Control: public, immutable, max-age=31536000
+
+/js/*
+  Cache-Control: public, immutable, max-age=31536000
+
+/image/*
+  Cache-Control: public, max-age=604800
+
+/fonts/*
+  Cache-Control: public, immutable, max-age=31536000
+
+/*.woff
+  Cache-Control: public, immutable, max-age=31536000
+
+/*.woff2
+  Cache-Control: public, immutable, max-age=31536000
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/products.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/portfolio.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/work.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contact.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate

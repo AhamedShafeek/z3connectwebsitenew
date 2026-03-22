@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             gestureOrientation: 'vertical'
         });
 
+        // Expose globally so components.js can use it
+        window.lenis = lenis;
+
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);

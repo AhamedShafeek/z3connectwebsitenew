@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>Contact — Z3Connect</title>
+  <title>Vlogs — Z3Connect Community Learning Hub</title>
   <meta name="description"
-    content="Get in touch with Z3Connect. Whether it's a new project or a partnership inquiry, we're ready to listen.">
+    content="Watch our vlogs on software development, AI, business automation, and tech insights. Learn from Z3Connect's tech journey and industry expertise.">
   <meta name="author" content="Z3Connect">
   <meta name="theme-color" content="#000000">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://z3connect.com/contact.html">
-  <meta property="og:title" content="Contact — Z3Connect">
-  <meta property="og:description" content="Let's build something great together.">
+  <meta property="og:url" content="https://z3connect.com/vlogs.html">
+  <meta property="og:title" content="Vlogs — Z3Connect Community Learning Hub">
+  <meta property="og:description" content="Tech tutorials, insights, and business automation stories from Z3Connect.">
   <meta property="og:image" content="https://z3connect.com/image/z3connect-og.png">
 
   <!-- Fonts -->
@@ -24,7 +24,7 @@
   <link
     href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700&display=swap"
     rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
@@ -33,81 +33,299 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  
-  <!-- SEO Schema Markup -->
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://z3connect.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Contact",
-        "item": "https://z3connect.com/contact"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Contact Page Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Z3Connect",
-    "url": "https://z3connect.com/contact",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "telephone": "+91-9360220928",
-      "areaServed": ["India", "Worldwide"],
-      "email": "z3connect@gmail.com"
-    }
-  }
-  </script>
-
-  <!-- Organization Contact Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Z3Connect",
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "telephone": "+91-9360220928",
-        "url": "https://z3connect.com/contact"
-      },
-      {
-        "@type": "ContactPoint",
-        "contactType": "Email",
-        "email": "z3connect@gmail.com"
-      },
-      {
-        "@type": "ContactPoint",
-        "contactType": "WhatsApp",
-        "url": "https://wa.me/919360220928"
-      }
-    ]
-  }
-  </script>
 
   <!-- Favicon -->
   <link rel="icon" href="image/logo0.png" type="image/png">
   <link rel="apple-touch-icon" href="image/logo0.png">
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    .vlog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .vlog-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .vlog-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(37, 99, 235, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .vlog-thumbnail {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(34, 197, 94, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vlog-thumbnail svg {
+      width: 60px;
+      height: 60px;
+      opacity: 0.5;
+    }
+
+    .vlog-thumbnail.has-image {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .play-button {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .vlog-card:hover .play-button {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+
+    .play-button::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 12px solid white;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      margin-left: 3px;
+    }
+
+    .vlog-info {
+      padding: 1.5rem;
+    }
+
+    .vlog-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: white;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .vlog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 1rem;
+    }
+
+    .vlog-category {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.2);
+      color: #60a5fa;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .vlog-description {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .vlog-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .vlog-author-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563EB, #22C55E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .vlog-author-info small {
+      display: block;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .upload-section {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.05));
+      border: 2px dashed rgba(37, 99, 235, 0.3);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .upload-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .upload-section p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .upload-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: white;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(37, 99, 235, 0.5);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .file-input-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .file-input-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(37, 99, 235, 0.1);
+      border: 2px solid rgba(37, 99, 235, 0.3);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .file-input-label:hover {
+      background: rgba(37, 99, 235, 0.15);
+      border-color: rgba(37, 99, 235, 0.5);
+    }
+
+    .file-input-label input {
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #2563EB, #1e40af);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    }
+
+    .hero-section {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.05));
+      border-radius: 16px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-section h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-black text-white">
 
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -249,120 +467,239 @@
           <a href="clients.html" class="mobile-menu-sublink">Clients</a>
         </div>
       </div>
+      <a href="vlogs.html" class="mobile-menu-link">Vlogs</a>
       <a href="contact.html" class="mobile-menu-link">Contact</a>
     </div>
     <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
   </div>
 
-  <!-- ============================================
-       SECTION 1: HERO (BLACK)
-       ============================================ -->
-  <section class="hero section-dark h-60vh">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <h1 class="hero-headline">
-        <span class="line hero-line-1">Let's build</span>
-        <span class="line hero-line-2">something great.</span>
-      </h1>
-      <p class="hero-subtitle">Tell us about your project. We'll tell you how we can help.</p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero-section" style="margin-top: 120px;">
+    <h1>Z3Connect Vlogs</h1>
+    <p>Learn from our tech journey, industry insights, and software development stories</p>
   </section>
 
-  <!-- ============================================
-       SECTION 2: FORM (DARK GLASS)
-       ============================================ -->
-  <section class="section-dark section-padding" id="contact-form">
-    <div class="container">
-      <div class="contact-grid">
+  <!-- Main Content -->
+  <main style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
 
-        <!-- Left: Contact Info -->
-        <div class="contact-info reveal-element" style="padding-top: 24px;">
-          <h3 class="font-display" style="font-size: 1.5rem; margin-bottom: 24px;">Contact Us</h3>
-
-          <div style="display: flex; flex-direction: column; gap: 32px;">
-            <div>
-              <p class="glass-label" style="margin-bottom: 8px;">Email</p>
-              <a href="mailto:z3connect@gmail.com"
-                style="font-size: 1.125rem; font-weight: 500;">z3connect@gmail.com</a>
+    <!-- Featured Videos Section -->
+    <section>
+      <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Featured Vlogs</h2>
+      <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 2rem;">Curated stories from our tech journey</p>
+      
+      <div class="vlog-container">
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">Building AI-Powered POS System</h3>
+              <span class="vlog-category">AI/Tech</span>
             </div>
-
-            <div>
-              <p class="glass-label" style="margin-bottom: 8px;">Phone</p>
-              <a href="tel:+919360220928" style="font-size: 1.125rem; font-weight: 500;">+91 93602 20928</a>
+            <div class="vlog-meta">
+              <span>8 min</span>
+              <span>2 weeks ago</span>
             </div>
-
-            <div>
-              <p class="glass-label" style="margin-bottom: 8px;">Address</p>
-              <p style="font-size: 1.125rem; color: var(--white);">Nagercoil, Tamil Nadu<br>India</p>
-            </div>
-
-            <div>
-              <p class="glass-label" style="margin-bottom: 8px;">Socials</p>
-              <div class="flex gap-4">
-                <a href="#" class="contact-social-link">LinkedIn</a>
-                <a href="#" class="contact-social-link">Instagram</a>
-                <a href="#" class="contact-social-link">Twitter</a>
+            <p class="vlog-description">Deep dive into how we built an intelligent POS system that learns from transaction patterns.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>1,234 views</small>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Form -->
-        <div class="contact-form-wrapper reveal-element glass"
-          style="padding: 48px; border-radius: 24px;">
-          <form id="projectQuoteForm">
-            <div style="display: grid; gap: 24px;">
-              <div>
-                <label for="name" class="glass-label">FULL NAME</label>
-                <input type="text" id="name" name="name" placeholder="Jane Doe" class="glass-input" required>
-              </div>
-
-              <div>
-                <label for="email" class="glass-label">BUSINESS EMAIL</label>
-                <input type="email" id="email" name="email" placeholder="jane@company.com" class="glass-input" required>
-              </div>
-
-              <div>
-                <label for="budget" class="glass-label">PROJECT BUDGET</label>
-                <select id="budget" name="budget" class="glass-input">
-                  <option value="" disabled selected>Select a range</option>
-                  <option value="small">&lt; ₹1 Lakh</option>
-                  <option value="medium">₹1 Lakh – ₹5 Lakhs</option>
-                  <option value="large">₹5 Lakhs – ₹20 Lakhs</option>
-                  <option value="enterprise">₹20 Lakhs+</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message" class="glass-label">YOUR INQUIRY</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." class="glass-input" required></textarea>
-              </div>
-
-              <button type="submit" class="btn-gold w-full mt-2">SEND MESSAGE</button>
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">MSME Software Automation Guide</h3>
+              <span class="vlog-category">Business</span>
             </div>
-          </form>
-
-          <div id="formSuccessMessage" class="hidden text-center mt-8 py-8">
-            <div class="contact-success-icon mb-4 mx-auto">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
+            <div class="vlog-meta">
+              <span>12 min</span>
+              <span>1 month ago</span>
             </div>
-            <h3 class="text-2xl mb-2">Message Sent!</h3>
-            <p class="text-secondary">We'll get back to you within 24 hours.</p>
+            <p class="vlog-description">Step-by-step guide on how small businesses can automate their operations without technical expertise.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>856 views</small>
+              </div>
+            </div>
           </div>
         </div>
 
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">From Nagercoil to Enterprise SaaS</h3>
+              <span class="vlog-category">Story</span>
+            </div>
+            <div class="vlog-meta">
+              <span>15 min</span>
+              <span>1 month ago</span>
+            </div>
+            <p class="vlog-description">Our journey building enterprise-grade software from a small town in Tamil Nadu.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>2,103 views</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================
-       SECTION 6: FOOTER (BLACK)
-       ============================================ -->
+    <!-- Community Upload Section -->
+    <section>
+      <div class="upload-section">
+        <h3>📹 Share Your Story</h3>
+        <p>Got a tech story, tutorial, or business tip? Upload and share with our community</p>
+        
+        <form class="upload-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="title">Vlog Title *</label>
+            <input type="text" id="title" name="title" placeholder="E.g., How I Automated My Inventory..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="tutorial">Tutorial</option>
+              <option value="business">Business Tips</option>
+              <option value="story">Success Story</option>
+              <option value="tech">Tech Insights</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea id="description" name="description" placeholder="Describe your vlog content..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="video">Upload Video File *</label>
+            <div class="file-input-wrapper">
+              <label class="file-input-label">
+                <span>📎 Click to select video or drag here</span>
+                <input type="file" id="video" name="video" accept="video/*" required>
+              </label>
+            </div>
+            <small style="display: block; margin-top: 0.5rem; color: rgba(255, 255, 255, 0.5);">Max 500MB | Supported: MP4, WebM, MOV</small>
+          </div>
+
+          <div class="form-group">
+            <label for="creator">Your Name *</label>
+            <input type="text" id="creator" name="creator" placeholder="Your name or channel name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Upload Vlog</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- More Vlogs -->
+    <section style="margin-top: 4rem;">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem;">All Vlogs</h2>
+      <div class="vlog-container">
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">REST API Design Best Practices</h3>
+              <span class="vlog-category">Tech</span>
+            </div>
+            <div class="vlog-meta">
+              <span>10 min</span>
+              <span>3 weeks ago</span>
+            </div>
+            <p class="vlog-description">Learn industry standards for designing scalable and maintainable REST APIs.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>567 views</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">Scaling Database Performance</h3>
+              <span class="vlog-category">Tech</span>
+            </div>
+            <div class="vlog-meta">
+              <span>14 min</span>
+              <span>1 month ago</span>
+            </div>
+            <p class="vlog-description">Practical techniques for optimizing database queries and improving application performance.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>789 views</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vlog-card">
+          <div class="vlog-thumbnail">
+            <div class="play-button"></div>
+          </div>
+          <div class="vlog-info">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+              <h3 class="vlog-title">Customer Success Stories</h3>
+              <span class="vlog-category">Story</span>
+            </div>
+            <div class="vlog-meta">
+              <span>18 min</span>
+              <span>2 months ago</span>
+            </div>
+            <p class="vlog-description">How our clients transformed their business operations with Z3Connect's solutions.</p>
+            <div class="vlog-author">
+              <div class="vlog-author-avatar">Z3</div>
+              <div class="vlog-author-info">
+                <strong style="font-size: 0.9rem;">Z3Connect Team</strong>
+                <small>1,456 views</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
   <!-- ── PREMIUM FOOTER ── -->
-  <footer class="section-dark footer" id="footer">
+  <footer class="section-dark footer" id="footer" style="margin-top: 6rem;">
     <!-- Newsletter Section -->
     <div class="footer-newsletter">
       <h5>Stay Updated</h5>
@@ -497,16 +834,56 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/919360220928" class="whatsapp-float" target="_blank" rel="noopener"
-    aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
-  </a>
+  <script>
+    // Handle form submission
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const formData = new FormData(event.target);
+      const data = {
+        title: formData.get('title'),
+        category: formData.get('category'),
+        description: formData.get('description'),
+        creator: formData.get('creator'),
+        email: formData.get('email'),
+        uploadedAt: new Date().toISOString()
+      };
+      
+      console.log('Vlog submission:', data);
+      
+      // Show success message
+      alert('Thank you for your submission! We\'ll review and publish your vlog soon.');
+      event.target.reset();
+    }
 
-  <!-- Scripts -->
+    // Drag and drop for file input
+    const fileInput = document.getElementById('video');
+    const fileLabel = document.querySelector('.file-input-label');
+    
+    if (fileLabel) {
+      fileLabel.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        fileLabel.style.background = 'rgba(37, 99, 235, 0.2)';
+        fileLabel.style.borderColor = 'rgba(37, 99, 235, 0.7)';
+      });
+      
+      fileLabel.addEventListener('dragleave', () => {
+        fileLabel.style.background = 'rgba(37, 99, 235, 0.1)';
+        fileLabel.style.borderColor = 'rgba(37, 99, 235, 0.3)';
+      });
+      
+      fileLabel.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (e.dataTransfer.files.length > 0) {
+          fileInput.files = e.dataTransfer.files;
+          fileLabel.style.background = 'rgba(37, 99, 235, 0.1)';
+          fileLabel.style.borderColor = 'rgba(37, 99, 235, 0.3)';
+        }
+      });
+    }
+  </script>
+
+  <!-- Include main JavaScript files -->
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
