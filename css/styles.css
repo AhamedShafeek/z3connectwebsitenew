@@ -689,7 +689,7 @@ ol {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: 140px var(--space-6) var(--space-16);
+  padding: 180px var(--space-6) var(--space-16);
   overflow: hidden;
 }
 
@@ -787,7 +787,7 @@ ol {
 
 /* Hero Section (Mobile-First) */
 .hero {
-  padding: 120px var(--space-4) var(--space-16);
+  padding: 140px var(--space-4) var(--space-16);
 }
 
 @media (min-width: 768px) {

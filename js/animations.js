@@ -75,22 +75,22 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 0.8s — Line 1 slides up + deblurs
+        // 0.3s — Line 1 slides up + deblurs
         setTimeout(() => {
             if (line1) line1.classList.add('hero-animate-line');
-        }, 800);
+        }, 300);
 
-        // 1.1s — Line 2 slides up + deblurs
+        // 0.5s — Line 2 slides up + deblurs
         setTimeout(() => {
             if (line2) line2.classList.add('hero-animate-line');
-        }, 1100);
+        }, 500);
 
-        // 1.4s — Subtitle typewriter
+        // 0.8s — Subtitle typewriter
         setTimeout(() => {
             if (subtitle) {
                 startTypewriter(subtitle);
             }
-        }, 1400);
+        }, 800);
 
         // 1.8s — CTAs fade in
         setTimeout(() => {
