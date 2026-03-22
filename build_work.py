@@ -4,13 +4,13 @@ content = '''<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work — Z3Connect</title>
-  <meta name="description" content="50+ projects delivered. See our case studies, portfolio, and client roster.">
+  <meta name="description" content="120+ projects delivered. See our case studies, portfolio, and client roster.">
   <meta name="author" content="Z3Connect">
   <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://z3connect.com/work.html">
   <meta property="og:title" content="Work — Z3Connect">
-  <meta property="og:description" content="50+ Projects. 30+ Happy Clients. See what we\'ve built.">
+  <meta property="og:description" content="120+ Projects. 100+ Happy Clients. See what we\'ve built.">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -324,7 +324,7 @@ content = '''<!DOCTYPE html>
         <div class="nav-dropdown" role="menu">
           <a href="work.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m12 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z"/></svg></span><span><strong>Portfolio</strong><small>Projects delivered</small></span></a>
           <a href="case-studies.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></span><span><strong>Case studies</strong><small>Real results, real impact</small></span></a>
-          <a href="clients.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span><span><strong>Clients</strong><small>30+ businesses powered</small></span></a>
+          <a href="clients.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span><span><strong>Clients</strong><small>100+ businesses powered</small></span></a>
         </div>
       </div>
       <a href="contact.html" class="nav-link">Contact</a>
@@ -379,7 +379,7 @@ content = '''<!DOCTYPE html>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="6" r="2" fill="currentColor"/></svg>
         Portfolio &amp; Case Studies
       </div>
-      <h1>50+ Projects<br><em>Delivered.</em></h1>
+      <h1>120+ Projects<br><em>Delivered.</em></h1>
       <p class="work-hero-desc">From SaaS platforms to enterprise ERPs — we solve complex problems for businesses across India and beyond.</p>
       <div class="work-stats">
         <div>
