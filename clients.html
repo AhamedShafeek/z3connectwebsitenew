@@ -1,0 +1,1195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Clients — Z3Connect | 100+ Businesses. 18 Industries. One Team.</title>
+  <meta name="description"
+    content="Z3Connect has built software for 100+ clients across 18 industries — from international e-commerce to construction, automotive, AI, and retail.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://z3connect.com/clients.html">
+  <meta property="og:title" content="Clients — Z3Connect | 100+ Businesses Powered">
+  <meta property="og:image" content="https://z3connect.com/image/z3connect-og.png">
+  <link rel="icon" href="/image/icon/z3icon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&f[]=satoshi@400,500,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    /* HERO */
+    .ch {
+      min-height: 88vh;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 140px 24px 80px
+    }
+
+    .ch-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(37, 99, 235, .09) 0%, transparent 70%)
+    }
+
+    .ch-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+      background-size: 60px 60px
+    }
+
+    .ch-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .ch-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: .74rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .4);
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      padding: 6px 14px;
+      border-radius: 100px
+    }
+
+    .ch h1 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.02;
+      margin-bottom: 20px
+    }
+
+    .ch h1 em {
+      font-style: normal;
+      color: rgba(255, 255, 255, .3)
+    }
+
+    .ch-sub {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto 52px
+    }
+
+    .ch-stats {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .ch-stat-num {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1
+    }
+
+    .ch-stat-lbl {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .35);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-top: 4px
+    }
+
+    /* MARQUEE */
+    .mq-wrap {
+      background: #000;
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+      padding: 18px 0;
+      overflow: hidden
+    }
+
+    .mq-track {
+      display: flex;
+      gap: 0;
+      animation: mq-scroll 40s linear infinite;
+      width: max-content
+    }
+
+    .mq-track span {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .85rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .35);
+      padding: 0 6px;
+      white-space: nowrap
+    }
+
+    .mq-dot {
+      color: rgba(37, 99, 235, .6) !important
+    }
+
+    @keyframes mq-scroll {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* FILTER */
+    .filter-sec {
+      background: #fff;
+      padding: 80px 24px 0
+    }
+
+    .filter-sec .container {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 48px
+    }
+
+    .fb {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1.5px solid #e0e0e0;
+      background: #fff;
+      color: #555;
+      cursor: pointer;
+      transition: all .2s;
+      letter-spacing: .02em
+    }
+
+    .fb.active,
+    .fb:hover {
+      background: #000;
+      color: #fff;
+      border-color: #000
+    }
+
+    /* GRID */
+    .grid-sec {
+      background: #fff;
+      padding: 32px 24px 96px
+    }
+
+    .grid-sec .container {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .cc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 32px
+    }
+
+    .cc {
+      background: #FAFAFA;
+      border: 1px solid #efefef;
+      border-radius: 14px;
+      padding: 24px 20px;
+      transition: transform .25s, box-shadow .25s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .cc::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #2563EB, transparent);
+      opacity: 0;
+      transition: opacity .25s
+    }
+
+    .cc:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .08)
+    }
+
+    .cc:hover::before {
+      opacity: 1
+    }
+
+    .cc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px
+    }
+
+    .cc-logo {
+      width: 40px;
+      height: 40px;
+      background: #0A0A0A;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Clash Display', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0
+    }
+
+    .badge {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px
+    }
+
+    .badge-live {
+      background: rgba(16, 185, 129, .1);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, .2)
+    }
+
+    .badge-soft {
+      background: rgba(37, 99, 235, .09);
+      color: #2563EB;
+      border: 1px solid rgba(37, 99, 235, .18)
+    }
+
+    .badge-prog {
+      background: rgba(234, 179, 8, .1);
+      color: #b45309;
+      border: 1px solid rgba(234, 179, 8, .2)
+    }
+
+    .badge-pipe {
+      background: rgba(139, 92, 246, .08);
+      color: #7c3aed;
+      border: 1px solid rgba(139, 92, 246, .15)
+    }
+
+    .cc-name {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0A0A0A;
+      margin-bottom: 4px
+    }
+
+    .cc-ind {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .72rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 12px
+    }
+
+    .cc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px
+    }
+
+    .ct {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .68rem;
+      font-weight: 500;
+      background: #f0f0f0;
+      color: #666;
+      padding: 3px 9px;
+      border-radius: 100px
+    }
+
+    .cc-url {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .72rem;
+      color: #2563EB;
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      margin-top: 6px;
+      word-break: break-all
+    }
+
+    .cc-url:hover {
+      text-decoration: underline
+    }
+
+    .cc.hidden {
+      display: none
+    }
+
+    /* INDUSTRIES */
+    .ind-sec {
+      background: #000;
+      padding: 96px 24px;
+      border-top: 1px solid rgba(255, 255, 255, .06)
+    }
+
+    .ind-sec .container {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .ind-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 48px
+    }
+
+    .ip {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .65);
+      border: 1px solid rgba(255, 255, 255, .1);
+      padding: 10px 22px;
+      border-radius: 100px;
+      transition: all .2s
+    }
+
+    .ip:hover {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .2);
+      color: #fff
+    }
+
+    .ip.lg {
+      font-size: 1rem;
+      padding: 12px 28px
+    }
+
+    /* SEC HEADING */
+    .sh-lbl {
+      font-family: 'Satoshi', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px
+    }
+
+    .sh-h2 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #0A0A0A;
+      line-height: 1.1
+    }
+
+    .sh-h2.light {
+      color: #fff
+    }
+
+    .sh-lbl.light {
+      color: rgba(255, 255, 255, .35)
+    }
+
+    @media(max-width:768px) {
+      .cc-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
+      }
+
+      .ch-stats {
+        gap: 24px
+      }
+
+      .filter-bar {
+        gap: 6px
+      }
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" href="image/logo0.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/logo0.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <nav class="floating-nav" id="floating-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <img src="logo0.png" alt="Z3Connect" class="nav-logo-img">
+      <span>Z3Connect</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item" data-dropdown="company">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Company<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="about.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg></span><span><strong>About us</strong><small>Who we are and what drives us</small></span></a>
+          <a href="founder.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></span><span><strong>Founder</strong><small>The mind behind Z3Connect</small></span></a>
+          <a href="philosophy.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg></span><span><strong>Philosophy</strong><small>How we think and build</small></span></a>
+          <a href="why-we-exist.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></span><span><strong>Why we exist</strong><small>Our purpose and mission</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="products">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Products<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="products.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10" />
+              </svg></span><span><strong>All products</strong><small>Our complete product suite</small></span></a>
+          <a href="solutions-detailed.html" class="nav-dropdown-link" role="menuitem"><span
+              class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg></span><span><strong>Solutions</strong><small>Industry-specific software</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="work">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Work<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="work.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m12 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z" />
+              </svg></span><span><strong>Portfolio</strong><small>Projects we've delivered</small></span></a>
+          <a href="case-studies.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg></span><span><strong>Case studies</strong><small>Real results, real impact</small></span></a>
+          <a href="clients.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg></span><span><strong>Clients</strong><small>100+ businesses we've powered</small></span></a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="get-quote.html" class="nav-cta">Get quote</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false"><svg
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg></button>
+    <div class="mobile-menu-links">
+      <div class="mobile-nav-group"><button class="mobile-nav-group-title" aria-expanded="false">Company<svg
+            class="mobile-nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="about.html" class="mobile-menu-sublink">About us</a>
+          <a href="founder.html" class="mobile-menu-sublink">Founder</a>
+          <a href="philosophy.html" class="mobile-menu-sublink">Philosophy</a>
+          <a href="why-we-exist.html" class="mobile-menu-sublink">Why we exist</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group"><button class="mobile-nav-group-title" aria-expanded="false">Products<svg
+            class="mobile-nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="products.html" class="mobile-menu-sublink">All products</a>
+          <a href="solutions-detailed.html" class="mobile-menu-sublink">Solutions</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group"><button class="mobile-nav-group-title" aria-expanded="false">Work<svg
+            class="mobile-nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="work.html" class="mobile-menu-sublink">Portfolio</a>
+          <a href="case-studies.html" class="mobile-menu-sublink">Case studies</a>
+          <a href="clients.html" class="mobile-menu-sublink">Clients</a>
+        </div>
+      </div>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+    <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="ch" id="hero">
+    <div class="ch-bg"></div>
+    <div class="ch-grid"></div>
+    <div class="ch-inner">
+      <p class="ch-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.5" stroke-linecap="round">
+          <path
+            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg> Our Clients</p>
+      <h1>100+ Clients.<br><em>18 Industries.</em><br>One Team.</h1>
+      <p class="ch-sub">From EU e-commerce to Tamil Nadu restaurants — we build software that real businesses run on,
+        every single day.</p>
+      <div class="ch-stats">
+        <div>
+          <div class="ch-stat-num">100+</div>
+          <div class="ch-stat-lbl">Total Clients</div>
+        </div>
+        <div>
+          <div class="ch-stat-num">17</div>
+          <div class="ch-stat-lbl">Live Websites</div>
+        </div>
+        <div>
+          <div class="ch-stat-num">18</div>
+          <div class="ch-stat-lbl">Industries</div>
+        </div>
+        <div>
+          <div class="ch-stat-num">50+</div>
+          <div class="ch-stat-lbl">Projects Done</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq-wrap" aria-hidden="true">
+    <div class="mq-track">
+      <span>PD Turbo Tech</span><span class="mq-dot">·</span><span>MWI Groups</span><span
+        class="mq-dot">·</span><span>IQRAH Academy</span><span class="mq-dot">·</span><span>Safuu Clothing</span><span
+        class="mq-dot">·</span><span>Shiv's Photography</span><span class="mq-dot">·</span><span>Right Choice
+        Contracting</span><span class="mq-dot">·</span><span>Atom Infra</span><span class="mq-dot">·</span><span>Crazy
+        Coconut</span><span class="mq-dot">·</span><span>FAAM</span><span class="mq-dot">·</span><span>Made To
+        Lead</span><span class="mq-dot">·</span><span>Lam Stacks</span><span class="mq-dot">·</span><span>Fee
+        Sabeelillah</span><span class="mq-dot">·</span><span>Femmic</span><span class="mq-dot">·</span><span>KSV
+        Groups</span><span class="mq-dot">·</span><span>Pocket Delivery</span><span class="mq-dot">·</span><span>Creator
+        Base</span><span class="mq-dot">·</span><span>Learn By Z2Learn</span><span class="mq-dot">·</span><span>PD Turbo
+        Tech</span><span class="mq-dot">·</span><span>MWI Groups</span><span class="mq-dot">·</span><span>IQRAH
+        Academy</span><span class="mq-dot">·</span><span>Safuu Clothing</span><span class="mq-dot">·</span><span>Shiv's
+        Photography</span><span class="mq-dot">·</span><span>Right Choice Contracting</span><span
+        class="mq-dot">·</span><span>Atom Infra</span><span class="mq-dot">·</span><span>Crazy Coconut</span><span
+        class="mq-dot">·</span><span>FAAM</span><span class="mq-dot">·</span><span>Made To Lead</span><span
+        class="mq-dot">·</span><span>Lam Stacks</span><span class="mq-dot">·</span><span>Fee Sabeelillah</span><span
+        class="mq-dot">·</span><span>Femmic</span><span class="mq-dot">·</span><span>KSV Groups</span><span
+        class="mq-dot">·</span><span>Pocket Delivery</span><span class="mq-dot">·</span><span>Creator Base</span><span
+        class="mq-dot">·</span><span>Learn By Z2Learn</span><span class="mq-dot">·</span>
+    </div>
+  </div>
+
+  <!-- FILTER + GRID -->
+  <section class="filter-sec" id="all-clients">
+    <div class="container">
+      <p class="sh-lbl">Complete Roster</p>
+      <h2 class="sh-h2">Every business we've built for.</h2>
+      <div class="filter-bar" role="group" aria-label="Filter clients">
+        <button class="fb active" data-filter="all">All 52</button>
+        <button class="fb" data-filter="live"> Live Websites (17)</button>
+        <button class="fb" data-filter="software"> Software (4)</button>
+        <button class="fb" data-filter="progress"> In Progress (10)</button>
+        <button class="fb" data-filter="pipeline"> Pipeline (21)</button>
+      </div>
+    </div>
+  </section>
+  <section class="grid-sec">
+    <div class="container">
+      <div class="cc-grid" id="clientGrid">
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">PT</div><span class="badge badge-live">Live</span>
+              <div class="cc-logo"><img src="image/portfolio_logo/Shiv's Photography Logo.png" alt="Shiv's Photography Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+              <div class="cc-logo"><img src="image/portfolio_logo/crazycoconut_logo.webp" alt="Crazy Coconut Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+              <div class="cc-logo"><img src="image/portfolio_logo/atominfra_logo.png" alt="Atom Infra Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+          <div class="cc-name">PD Turbo Tech</div>
+          <div class="cc-ind">Automotive</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Billing</span></div><a
+            href="https://pdturbotech.com" target="_blank" rel="noopener" class="cc-url">pdturbotech.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">MG</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">MWI Groups</div>
+          <div class="cc-ind">Multi-Brand</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Systems</span></div><a
+            href="https://mwigroups.com" target="_blank" rel="noopener" class="cc-url">mwigroups.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">IA</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">IQRAH Academy</div>
+          <div class="cc-ind">Education</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">LMS</span></div><a
+            href="https://iqrahacademy.in" target="_blank" rel="noopener" class="cc-url">iqrahacademy.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">SC</div><span class="badge badge-live">Live</span>
+          </div>
+              <div class="cc-logo"><img src="image/portfolio_logo/faam_logo.png" alt="FAAM Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+          <div class="cc-name">Safuu Clothing</div>
+          <div class="cc-ind">Fashion</div>
+          <div class="cc-tags"><span class="ct">E-Commerce</span><span class="ct">Website</span></div><a
+            href="https://safuuclothing.in" target="_blank" rel="noopener" class="cc-url">safuuclothing.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">SP</div><span class="badge badge-live">Live</span>
+          </div>
+              <div class="cc-logo"><img src="image/portfolio_logo/safuclothing_logo.png" alt="Safuu Clothing Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+          <div class="cc-name">Shiv's Photography</div>
+          <div class="cc-ind">Photography</div>
+          <div class="cc-tags"><span class="ct">Portfolio</span><span class="ct">Booking</span></div><a
+            href="https://shivsphotography.com" target="_blank" rel="noopener" class="cc-url">shivsphotography.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">RC</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Right Choice Contracting</div>
+          <div class="cc-ind">Construction</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Lead Gen</span></div><a
+            href="https://rightchoicecontracting.com" target="_blank" rel="noopener"
+            class="cc-url">rightchoicecontracting.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">AI</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Atom Infra</div>
+          <div class="cc-ind">Construction Tech</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">3D/AR</span></div><a
+            href="https://atominfra.in" target="_blank" rel="noopener" class="cc-url">atominfra.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">CC</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Crazy Coconut</div>
+          <div class="cc-ind">F&B</div>
+          <div class="cc-tags"><span class="ct">POS</span><span class="ct">Menu Site</span></div><a
+            href="https://crazycoconut.in" target="_blank" rel="noopener" class="cc-url">crazycoconut.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">FAAM</div>
+          <div class="cc-ind">Sports & Fitness</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Membership</span></div><a
+            href="https://faam.co.in" target="_blank" rel="noopener" class="cc-url">faam.co.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">MT</div><span class="badge badge-live">Live</span>
+              <div class="cc-logo"><img src="image/portfolio_logo/mwi_logo.png" alt="MWI Groups Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+          <div class="cc-name">Made To Lead</div>
+          <div class="cc-ind">Coaching</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">CRM</span></div><a
+            href="https://madetolead.in" target="_blank" rel="noopener" class="cc-url">madetolead.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">LS</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Lam Stacks</div>
+          <div class="cc-ind">Tech / AI</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">SaaS</span></div><a
+            href="https://lamstacks.com" target="_blank" rel="noopener" class="cc-url">lamstacks.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">FS</div><span class="badge badge-live">Live</span>
+          </div>
+              <div class="cc-logo"><img src="image/portfolio_logo/Lamstacks-logo.svg" alt="Lam Stacks Logo" style="width: 48px; height: 48px; object-fit: contain;" /></div><span class="badge badge-live">Live</span>
+          <div class="cc-name">Fee Sabeelillah</div>
+          <div class="cc-ind">NGO</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Donations</span></div><a
+            href="https://feesabeelillah.com" target="_blank" rel="noopener" class="cc-url">feesabeelillah.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Femmic</div>
+          <div class="cc-ind">Healthcare</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Appointments</span></div><a
+            href="https://femmic.com" target="_blank" rel="noopener" class="cc-url">femmic.com ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">KG</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">KSV Groups</div>
+          <div class="cc-ind">Real Estate</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Lead Gen</span></div><a
+            href="https://ksvgroups.in" target="_blank" rel="noopener" class="cc-url">ksvgroups.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">PD</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Pocket Delivery</div>
+          <div class="cc-ind">Logistics</div>
+          <div class="cc-tags"><span class="ct">App</span><span class="ct">Tracking</span></div><a
+            href="https://pocketdelivery.in" target="_blank" rel="noopener" class="cc-url">pocketdelivery.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">CB</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Creator Base</div>
+          <div class="cc-ind">EdTech</div>
+          <div class="cc-tags"><span class="ct">Platform</span><span class="ct">Dashboard</span></div><a
+            href="https://creatorbase.in" target="_blank" rel="noopener" class="cc-url">creatorbase.in ↗</a>
+        </div>
+        <div class="cc" data-cat="live">
+          <div class="cc-top">
+            <div class="cc-logo">LB</div><span class="badge badge-live">Live</span>
+          </div>
+          <div class="cc-name">Learn By Z2Learn</div>
+          <div class="cc-ind">EdTech</div>
+          <div class="cc-tags"><span class="ct">Social Platform</span><span class="ct">LMS</span></div><a
+            href="https://learnby.z2learn.com" target="_blank" rel="noopener" class="cc-url">learnby.z2learn.com ↗</a>
+        </div>
+        <div class="cc" data-cat="software">
+          <div class="cc-top">
+            <div class="cc-logo">DC</div><span class="badge badge-soft">Software</span>
+          </div>
+          <div class="cc-name">Detailing Commando</div>
+          <div class="cc-ind">Automotive</div>
+          <div class="cc-tags"><span class="ct">SaaS</span><span class="ct">Booking</span></div><a
+            href="https://detailingcommando.com" target="_blank" rel="noopener" class="cc-url">detailingcommando.com
+            ↗</a>
+        </div>
+        <div class="cc" data-cat="software">
+          <div class="cc-top">
+            <div class="cc-logo">WF</div><span class="badge badge-soft">Software</span>
+          </div>
+          <div class="cc-name">Wash Factory</div>
+          <div class="cc-ind">Automotive</div>
+          <div class="cc-tags"><span class="ct">SaaS</span><span class="ct">Management</span></div>
+        </div>
+        <div class="cc" data-cat="software">
+          <div class="cc-top">
+            <div class="cc-logo">MC</div><span class="badge badge-soft">Software</span>
+          </div>
+          <div class="cc-name">Moon Cake</div>
+          <div class="cc-ind">F&B</div>
+          <div class="cc-tags"><span class="ct">POS</span><span class="ct">Billing</span></div>
+        </div>
+        <div class="cc" data-cat="software">
+          <div class="cc-top">
+            <div class="cc-logo">MT</div><span class="badge badge-soft">Software</span>
+          </div>
+          <div class="cc-name">Meeran Times</div>
+          <div class="cc-ind">Retail</div>
+          <div class="cc-tags"><span class="ct">Multi-shop SaaS</span><span class="ct">Billing</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">OA</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Orgix AI</div>
+          <div class="cc-ind">AI / Tech</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">AI Platform</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">DE</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Denvik EU</div>
+          <div class="cc-ind">E-Commerce</div>
+          <div class="cc-tags"><span class="ct">Website</span><span class="ct">Multi-language</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Luxxar</div>
+          <div class="cc-ind">EdTech</div>
+          <div class="cc-tags"><span class="ct">LMS</span><span class="ct">Platform</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">IC</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Insta Cafe</div>
+          <div class="cc-ind">F&B</div>
+          <div class="cc-tags"><span class="ct">Billing</span><span class="ct">Website</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">HS</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">High Surpless</div>
+          <div class="cc-ind">E-Commerce</div>
+          <div class="cc-tags"><span class="ct">Ecom</span><span class="ct">Billing</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">KB</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">KP Builders</div>
+          <div class="cc-ind">Construction</div>
+          <div class="cc-tags"><span class="ct">Mgmt System</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">PG</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Peer Glass</div>
+          <div class="cc-ind">Interior Design</div>
+          <div class="cc-tags"><span class="ct">Mgmt System</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">MG</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Meta Giants</div>
+          <div class="cc-ind">Agency / ERP</div>
+          <div class="cc-tags"><span class="ct">ERP</span><span class="ct">Payroll</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">PS</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Photo Select</div>
+          <div class="cc-ind">Photography</div>
+          <div class="cc-tags"><span class="ct">Mgmt System</span></div>
+        </div>
+        <div class="cc" data-cat="progress">
+          <div class="cc-top">
+            <div class="cc-logo">BS</div><span class="badge badge-prog">In Progress</span>
+          </div>
+          <div class="cc-name">Baithul Shawarma</div>
+          <div class="cc-ind">F&B</div>
+          <div class="cc-tags"><span class="ct">Billing Software</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">OT</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Outbound Traveller</div>
+          <div class="cc-ind">Travel</div>
+          <div class="cc-tags"><span class="ct">App</span><span class="ct">iOS/Android</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">CP</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Cera Pipes & Tiles</div>
+          <div class="cc-ind">Manufacturing</div>
+          <div class="cc-tags"><span class="ct">Mgmt System</span><span class="ct">MRR</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">CC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Chic Cares Saloon</div>
+          <div class="cc-ind">Beauty</div>
+          <div class="cc-tags"><span class="ct">Billing</span><span class="ct">Booking</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">CC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Chic Clothing</div>
+          <div class="cc-ind">Fashion</div>
+          <div class="cc-tags"><span class="ct">Billing</span><span class="ct">Website</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">LL</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Luxaar Learning</div>
+          <div class="cc-ind">EdTech</div>
+          <div class="cc-tags"><span class="ct">LMS</span><span class="ct">Platform</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">HG</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Hi-Tech Goat Farm</div>
+          <div class="cc-ind">Agriculture</div>
+          <div class="cc-tags"><span class="ct">Farm Mgmt</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">FM</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">FMCG Management</div>
+          <div class="cc-ind">Distribution</div>
+          <div class="cc-tags"><span class="ct">FMCG System</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">TM</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Trolly Management</div>
+          <div class="cc-ind">Logistics</div>
+          <div class="cc-tags"><span class="ct">Inventory</span><span class="ct">Warehouse</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">TS</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Toy Store Client</div>
+          <div class="cc-ind">Retail</div>
+          <div class="cc-tags"><span class="ct">Billing</span><span class="ct">Website</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">AC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">AI Camera</div>
+          <div class="cc-ind">AI / Manufacturing</div>
+          <div class="cc-tags"><span class="ct">Quality Check</span><span class="ct">AI</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">CA</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">ContentFlow AI</div>
+          <div class="cc-ind">AI / SaaS</div>
+          <div class="cc-tags"><span class="ct">Content AI</span><span class="ct">Automation</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">SylandraBabu.com</div>
+          <div class="cc-ind">Personal Brand</div>
+          <div class="cc-tags"><span class="ct">Website</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">DM</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Detailing Mafia</div>
+          <div class="cc-ind">Automotive</div>
+          <div class="cc-tags"><span class="ct">Mobile App</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Khalilahlam</div>
+          <div class="cc-ind">TBD</div>
+          <div class="cc-tags"><span class="ct">Negotiation</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">ZC</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">ROKN</div>
+          <div class="cc-ind">TBD</div>
+          <div class="cc-tags"><span class="ct">Negotiation</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">SS</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Spacific Star</div>
+          <div class="cc-ind">TBD</div>
+          <div class="cc-tags"><span class="ct">Negotiation</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">MF</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Mehmed Fateh Trading</div>
+          <div class="cc-ind">Trading</div>
+          <div class="cc-tags"><span class="ct">Business Systems</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">CE</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Celebrate Ecom</div>
+          <div class="cc-ind">E-Commerce</div>
+          <div class="cc-tags"><span class="ct">Commission</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">AB</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Arjun Bro Lead</div>
+          <div class="cc-ind">Services</div>
+          <div class="cc-tags"><span class="ct">Website</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">TS</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Thanu Siva</div>
+          <div class="cc-ind">Partner</div>
+          <div class="cc-tags"><span class="ct">Referral</span><span class="ct">Collab</span></div>
+        </div>
+        <div class="cc" data-cat="pipeline">
+          <div class="cc-top">
+            <div class="cc-logo">BZ</div><span class="badge badge-pipe">Pipeline</span>
+          </div>
+          <div class="cc-name">Balamurali ZDODA</div>
+          <div class="cc-ind">Partner</div>
+          <div class="cc-tags"><span class="ct">Referral</span><span class="ct">Collab</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="ind-sec" id="industries">
+    <div class="container">
+      <p class="sh-lbl light">Coverage</p>
+      <h2 class="sh-h2 light">18 industries and counting.</h2>
+      <div class="ind-cloud">
+        <span class="ip lg"> International E-Commerce</span>
+        <span class="ip lg"> Construction & Infra</span>
+        <span class="ip lg"> Automotive</span>
+        <span class="ip lg"> AI / SaaS</span>
+        <span class="ip"> Education & EdTech</span>
+        <span class="ip"> Fashion & Retail</span>
+        <span class="ip"> Photography</span>
+        <span class="ip"> F&amp;B / Restaurants</span>
+        <span class="ip"> Sports & Fitness</span>
+        <span class="ip"> Healthcare</span>
+        <span class="ip"> Real Estate</span>
+        <span class="ip"> Logistics</span>
+        <span class="ip"> Manufacturing</span>
+        <span class="ip"> Agriculture</span>
+        <span class="ip"> Travel</span>
+        <span class="ip"> Beauty & Wellness</span>
+        <span class="ip"> NGO / Non-Profit</span>
+        <span class="ip"> Agency / ERP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-dark cta-section" id="cta">
+    <div class="container">
+      <div class="reveal-element">
+        <h2 class="cta-headline">Your business<br>next?</h2>
+        <a href="get-quote.html" class="btn-solid" style="font-size:1rem;padding:16px 40px">Get a free quote</a>
+        <div style="margin-top:24px">
+          <p style="margin-top:0">or call <a href="tel:+919360220928">+91 93602 20928</a></p>
+          <p style="margin-top:8px">or <a href="https://wa.me/919360220928" target="_blank" rel="noopener">WhatsApp us
+            </a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="section-dark footer" id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="logo0.png" alt="Z3Connect" class="nav-logo-img footer-logo-img">
+          <span>Z3Connect</span>
+        </div>
+        <p>AI-driven software for businesses that want to grow. Built with care in Tamil Nadu.</p>
+        <div class="built-in-tn"><span>🇮🇳</span><span>Built in Tamil Nadu</span></div>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:z3connect@gmail.com">z3connect@gmail.com</a></p>
+        <p><a href="tel:+919360220928">+91 93602 20928</a></p>
+        <p>Nagercoil, Tamil Nadu</p>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="footer-social-links">
+          <a href="#" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><svg
+              viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg></a>
+          <a href="https://wa.me/919360220928" class="footer-social-link" aria-label="WhatsApp" target="_blank"
+            rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> 2025 Z3Connect. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919360220928" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+</body>
+
+</html>

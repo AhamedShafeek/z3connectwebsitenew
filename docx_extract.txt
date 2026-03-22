@@ -1,0 +1,211 @@
+TABLE 1
+COLLECTED / ₹52,000 | DUE / ₹2,03,200 | POTENTIAL / ₹2,70,000 | MRR BASE / ₹16K/month
+TABLE 2
+# | Client Name | URL | Status
+1 | PD Turbo Tech | https://www.pdturbotech.com/ | Done
+2 | MWI Groups | https://mwigroups.com/ | Done
+3 | IQRAH Academy | https://www.iqrahacademy.in/ | Done
+4 | Safuu Clothing | https://www.safuuclothing.in/ | Done
+5 | Shivs Photography | https://www.shivsphotography.com/ | Done
+6 | Right Choice Contracting | https://www.rightchoicecontracting.com/ | Done
+7 | Atom Infra | https://www.atominfra.in/ | Done
+8 | Crazy Coconut | https://www.crazycoconut.in/ | Done
+9 | FAAM | https://www.faam.co.in/ | Done
+10 | Made To Lead | https://madetolead.in/ | Done
+11 | Lam Stacks | https://lamstacks.com/ | Done
+12 | Fee Sabeelillah | https://www.feesabeelillah.com/ | Done
+13 | Femmic | https://www.femmic.com/ | Done
+14 | KSV Groups | https://www.ksvgroups.in/ | Done
+15 | Pocket Delivery | https://www.pocketdelivery.in/ | Done
+16 | Creator Base | https://www.creatorbase.in/ | Done
+17 | Learn By Z2Learn | https://learnby.z2learn.com | Done
+TABLE 3
+# | Client Name | URL / Note | Status
+1 | Lamstack (Orgix AI) | In Development | In Progress
+2 | High Surpless | In Development | In Progress
+3 | Luxxar | In Development | In Progress
+4 | Insta Cafe | In Development | In Progress
+5 | Shivs (Redesign) | In Development | In Progress
+6 | Denvik EU | In Development | In Progress
+TABLE 4
+# | Client Name | Note | Status
+1 | Khalilahlam | Lead / Negotiation | Potential
+2 | ROKN | Lead / Negotiation | Potential
+3 | Spacific Star | Lead / Negotiation | Potential
+4 | Mehmed Fateh General Trading | Lead / Negotiation | Potential
+5 | Sylandra Babu | Lead / Negotiation | Potential
+6 | Detailing Mafia | Lead / Negotiation | Potential
+TABLE 5
+# | Client | Product / Type | Deal Value | Status
+1 | Z-Wash (Detailing Commando) | Wash factory management + booking | ₹10,000 + ₹1,000 MRR | Done
+2 | Wash Factory (Premium) | Advanced management | ₹20,000 + ₹1,500 MRR | Done
+3 | Moon Cake POS | POS + billing (2 shops) | ₹10,000 per shop | Done
+4 | Meeran Times Watch Shop | Multi-shop wholesale & retail SaaS | ₹28,000 + ₹1,000 MRR | Done
+TABLE 6
+# | Client | Product / Type | Deal Value | Status
+1 | KP Builders | Construction management system | ₹20,000 | In Progress
+2 | Peer Glass | Interior works management | ₹20,000 | In Progress
+3 | Meta Gaints | Digital marketing agency management | ₹30,000 + ₹1,500 MRR | In Progress
+4 | MWI — 1 Website + Billing | Business management | ₹5,000 balance | In Progress
+5 | MWI — 4 Websites | Web systems | ₹32,000 | In Progress
+6 | Photo Select | Photography management | ₹10,000 + ₹500 MRR | In Progress
+7 | Safu (Web + Billing) | Billing + management | ₹8,000 | In Progress
+8 | Baithul Shawarma | Billing software | — | In Progress
+TABLE 7
+# | Client | Product / Type | Deal Value | MRR
+1 | Outbound Traveller | Itinerary generator + user portal (iOS/Android) | ₹1,00,000 + ₹1,000 MRR | —
+2 | Cera Pipes & Tiles | Full management + MRR system | ₹1,00,000 + ₹8–10K MRR | —
+3 | Chic Cares & Haircut Saloon | Billing + booking | ₹10,000 + ₹300 MRR | —
+4 | Chic Clothing | Billing + website | ₹15,000 + ₹500 MRR | —
+5 | Hi-Tech Goat Farm | Farm management system | — | —
+6 | FMCG Management | FMCG distribution system | — | —
+7 | KSV Groups | Lodge + Auditorium management | — | —
+8 | Trolly Management | Inventory + warehouse management | ₹60,000 + ₹4,000 MRR | —
+9 | Luxaar Learning Platform | LMS platform | ₹30,000 + ₹1,000 MRR | —
+10 | Pocket Delivery | Delivery software | — | —
+11 | Toy Store Billing | Billing + website + order mgmt | ₹25,000 + ₹1,000 MRR | —
+12 | High Surpless (Ecom) | Multi-category ecommerce + billing | ₹30,000 + ₹1,500 MRR | —
+13 | AI Camera (Quality Check) | AI parts quality checking | — | —
+14 | ContentFlow AI | AI content creation + automation | — | —
+TABLE 8
+# | Product | Type | Pricing
+1 | Flow by Z3Connect | SME management tool | ₹599–₹999/month
+2 | Z-Auto (ZInventory) | Auto management | ₹10,000 + ₹1,000 MRR
+3 | ZLMS | Learning management system | ₹15,000 + ₹3,000 MRR
+4 | HMS | Hotel management system | ₹20–40K + ₹1.5–4K MRR
+5 | PettiKadai POS | Retail POS | ₹199/month
+6 | Tea Kadai POS | POS for tea shops | ₹199/month
+7 | Supermarket Billing | Supermarket billing system | ₹199/month
+8 | Z-Loon (Saloon) | Saloon management + booking | ₹499/month
+TABLE 9
+Client | Month | Amount
+Detailing Commando | January | ₹5,000
+Moon Cake POS | January | ₹5,000
+Celebrate Ecom | January | ₹5,000
+Femmic Team | January | ₹5,000
+Basith (MWI) | January | ₹5,000
+TABLE 10
+JANUARY TOTAL | ₹25,000
+TABLE 11
+Client | Month | Amount
+Lamstack | February | ₹5,000
+PD Turbo | February | ₹2,000
+Peer Management | February | ₹5,000
+Meeran | February | ₹10,000
+Insta Cafe (Billing) | February | ₹5,000
+TABLE 12
+FEBRUARY TOTAL | ₹22,000
+TABLE 13
+GRAND TOTAL COLLECTED (Jan + Feb) | ₹47,000
+TABLE 14
+Client / Project | Category | Amount Due
+Lamstack Website Balance | Website | ₹5,000
+PD Turbo (March Content) | Content | ₹5,000
+Moon Cake (Final) | POS/Billing | ₹5,000
+Peer Glass | Management System | ₹2,000
+Right Choose | Balance | ₹7,000
+Meeran (Balance) | Management System | ₹18,000
+KP Builders | Management System | ₹20,000
+MWI Website Balance | Website | ₹5,000
+MWI 4 Websites | Websites | ₹32,000
+MWI 4 Logos | Design | ₹1,200
+Meta Gaints | Management System | ₹30,000
+Insta Cafe (Website) | Website | ₹10,000
+Safu (Web + Billing) | Web + Billing | ₹8,000
+Shivs (Website Redesign) | Website | ₹10,000
+Lamstack Orgix AI Deal | Web + AI | ₹45,000
+TABLE 15
+TOTAL CONFIRMED DUE | ₹2,03,200
+TABLE 16
+Client / Project | Type | One-Time | MRR
+Luxaar Learning Platform | LMS | ₹30,000 | ₹1,000/month
+Outbound Itinerary Generator | Web App | ₹15,000 | ₹1,000/month
+Outbound Website SEO | SEO | ₹5,000 | —
+Outbound User Portal (Web + iOS + Android) | Mobile + Web App | ₹80,000 | —
+Cera Pipes & Tiles | Management System | ₹1,00,000 | ₹8,000–10,000/month
+Chic Salon Billing | Billing System | ₹10,000 | ₹300/month
+Chic Clothing Billing | Billing System | ₹15,000 | ₹500/month
+Arjun Bro Website Lead | Website | ₹10,000 | —
+Detailing Commando SEO | SEO | ₹5,000 | —
+SylandraBabu.com | Website | ₹30,000 | —
+Detailing Mafia App | Mobile App | ₹50,000 | —
+High Surpless | Ecom + Billing | ₹40,000 | ₹1,500/month
+TABLE 17
+TOTAL POTENTIAL ONE-TIME | ₹3,90,000
+TABLE 18
+Client / Stream | Status | Monthly Revenue
+Insta Cafe (Content) | Confirmed | ₹5,000/month
+Luxaar Platform | Potential | ₹1,000/month
+Outbound System | Potential | ₹1,000/month
+Cera Pipes | Potential | ₹8,000–10,000/month
+Chic Salon | Potential | ₹300/month
+Chic Clothing | Potential | ₹500/month
+Meeran Times | Active | ₹1,000/month
+Thanu Siva (Referral) | Collab | ~₹10,000/month
+Balamurali ZDODA (Collab) | Collab | ₹7,500–15,000/client
+TABLE 19
+CONFIRMED MRR (Insta Cafe + Meeran) | ₹6,000/month
+TABLE 20
+POTENTIAL MRR (If all close) | ₹16,800–₹18,800/month
+TABLE 21
+# | Name | Type | Status | Deal / Note
+1 | PD Turbo Tech | Website + Billing | Done | pdturbotech.com — live
+2 | MWI Groups | Website + Systems | Done / In Progress | mwigroups.com — 4 websites pending
+3 | IQRAH Academy | Website | Done | iqrahacademy.in — live
+4 | Safuu Clothing | Website | Done | safuuclothing.in — live
+5 | Shivs Photography | Website + Redesign | Done / In Progress | shivsphotography.com
+6 | Right Choice Contracting | Website | Done | rightchoicecontracting.com — live
+7 | Atom Infra | Website | Done | atominfra.in — live
+8 | Crazy Coconut | Website | Done | crazycoconut.in — live
+9 | FAAM | Website | Done | faam.co.in — live
+10 | Made To Lead | Website | Done | madetolead.in — live
+11 | Lam Stacks | Website + Orgix AI | Done + In Progress | lamstacks.com — Orgix AI 45K due
+12 | Fee Sabeelillah | Website | Done | feesabeelillah.com — live
+13 | Femmic | Website | Done | femmic.com — live
+14 | KSV Groups | Website + Management | Done / Potential | ksvgroups.in — lodge + auditorium mgmt
+15 | Pocket Delivery | Website + Software | Done / Potential | pocketdelivery.in
+16 | Creator Base | Platform | Done | creatorbase.in — Z2Learn product
+17 | Learn By Z2Learn | Social Education Platform | Done | learnby.z2learn.com
+18 | Detailing Commando | Z-Wash + SEO | Done + Potential | ₹5K collected, SEO 5K potential
+19 | KP Builders | Construction Mgmt System | In Progress | 20K due
+20 | Peer Glass | Interior Works Mgmt | In Progress | ₹2,000 balance due
+21 | Meeran Times | Multi-shop SaaS | Done + MRR | ₹10K collected, ₹18K balance, ₹1K MRR
+22 | Moon Cake | POS + Billing (2 shops) | Done / Due | ₹5K final due
+23 | High Surpless | Ecom + Billing | Potential | ₹40K+ potential
+24 | Meta Gaints | Agency Mgmt System | In Progress | ₹30K due
+25 | Photo Select | Photography Mgmt | In Progress | ₹10K + ₹500 MRR
+26 | Safu (Web + Billing) | Web + Billing | In Progress | ₹8,000 due
+27 | Insta Cafe | Billing + Website + Content | Done + MRR | ₹5K content/month MRR
+28 | Baithul Shawarma | Billing Software | In Progress | —
+29 | Outbound Traveller | App + SEO + Portal | Potential | ₹1L+ one-time, ₹1K MRR
+30 | Cera Pipes & Tiles | Full Mgmt System | Potential | ₹1L + ₹8–10K MRR
+31 | Chic Cares (Saloon) | Billing + Booking | Potential | ₹10K + ₹300 MRR
+32 | Chic Clothing | Billing + Website | Potential | ₹15K + ₹500 MRR
+33 | Luxaar | LMS Platform + Website | Potential | ₹30K + ₹1K MRR
+34 | Hi-Tech Goat Farm | Farm Mgmt System | Potential | TBD
+35 | FMCG Management | FMCG System | Potential | TBD
+36 | Trolly Management | Inventory + Warehouse | Potential | ₹60K + ₹4K MRR
+37 | Toy Store Client | Billing + Web | Potential | ₹25K + ₹1K MRR
+38 | AI Camera (Quality Check) | AI Product | Concept | TBD
+39 | ContentFlow AI | AI Content Tool | Concept | TBD
+40 | Arjun Bro Lead | Website | Lead | ₹10,000
+41 | SylandraBabu.com | Website | Potential | ₹30,000
+42 | Detailing Mafia | App | Potential | ₹50,000
+43 | Right Choose | Service Balance | Due | ₹7,000 balance
+44 | Khalilahlam | TBD | Lead | —
+45 | ROKN | TBD | Lead | —
+46 | Spacific Star | TBD | Lead | —
+47 | Mehmed Fateh General Trading | TBD | Lead | —
+48 | Denvik EU | Website | In Progress | —
+49 | Orgix AI | Website + AI | In Progress | ₹45K (part of Lamstack deal)
+50 | Thanu Siva | Collab / Referral | Partner | ~₹10K/month value
+51 | Balamurali (ZDODA) | Collab / Referral | Partner | 50% share ₹7.5–15K/client
+52 | Peer Management | Service | Collected | ₹5K collected Feb
+53 | Celebrate Ecom | Commission | Collected | ₹5K collected Jan
+TABLE 22
+TOTAL COLLECTED (Jan–Feb) | ₹47,000
+CONFIRMED DUE (Pending Collection) | ₹2,03,200
+POTENTIAL PIPELINE (Not Closed) | ₹3,90,000
+CONFIRMED MRR (Active) | ₹6,000/month
+POTENTIAL MRR (If All Close) | ₹16,800–₹18,800/month
+TOTAL MOVEMENT OPPORTUNITY | ₹6,40,200+

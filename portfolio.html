@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Portfolio — Z3Connect</title>
+  <meta name="description"
+    content="View Z3Connect's portfolio: 30+ clients, 50+ projects for retail, cafes, hospitality, healthcare building automation tools for businesses everywhere.">
+  <meta name="author" content="Z3Connect">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/image/icon/z3icon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <nav class="floating-nav" id="floating-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <img src="logo0.png" alt="Z3Connect" class="nav-logo-img">
+      <span>Z3Connect</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item" data-dropdown="company">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Company<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="about.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg></span><span><strong>About us</strong><small>Who we are and what drives us</small></span></a>
+          <a href="founder.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></span><span><strong>Founder</strong><small>The mind behind Z3Connect</small></span></a>
+          <a href="philosophy.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg></span><span><strong>Philosophy</strong><small>How we think and build</small></span></a>
+          <a href="team.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg></span><span><strong>Team</strong><small>Meet the people building the future</small></span></a>
+          <a href="why-we-exist.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></span><span><strong>Why we exist</strong><small>Our purpose and mission</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="products">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Products<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="products.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10" />
+              </svg></span><span><strong>All products</strong><small>Our complete product suite</small></span></a>
+          <a href="solutions-detailed.html" class="nav-dropdown-link" role="menuitem"><span
+              class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg></span><span><strong>Solutions</strong><small>Industry-specific software</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="work">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Work<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="work.html" class="nav-dropdown-link active" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m12 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z" />
+              </svg></span><span><strong>Portfolio</strong><small>Projects we've delivered</small></span></a>
+          <a href="case-studies.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg></span><span><strong>Case studies</strong><small>Real results, real impact</small></span></a>
+          <a href="clients.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg></span><span><strong>Clients</strong><small>100+ businesses we've powered</small></span></a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="get-quote.html" class="nav-cta">Get quote</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="mobile-menu-links">
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Company<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="about.html" class="mobile-menu-sublink">About us</a>
+          <a href="founder.html" class="mobile-menu-sublink">Founder</a>
+          <a href="philosophy.html" class="mobile-menu-sublink">Philosophy</a>
+          <a href="team.html" class="mobile-menu-sublink">Team</a>
+          <a href="why-we-exist.html" class="mobile-menu-sublink">Why we exist</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Products<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="products.html" class="mobile-menu-sublink">All products</a>
+          <a href="solutions-detailed.html" class="mobile-menu-sublink">Solutions</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Work<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="portfolio.html" class="mobile-menu-sublink">Portfolio</a>
+          <a href="case-studies.html" class="mobile-menu-sublink">Case studies</a>
+          <a href="clients.html" class="mobile-menu-sublink">Clients</a>
+        </div>
+      </div>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+    <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
+  </div>
+
+  <section class="section-dark about-hero" style="padding-top: 140px; padding-bottom: 80px;">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container relative z-10 text-center">
+      <div class="reveal-element">
+        <p class="label" style="margin-bottom: 24px;">Our Work</p>
+        <h1 class="hero-title">
+          Projects That<br><span class="text-gradient">Drive Results</span>
+        </h1>
+        <p class="hero-desc" style="max-width: 800px; margin: 32px auto;">
+          From POS systems to international websites, we've helped 50+ businesses across India, Qatar, and Europe
+          transform their operations with custom software solutions.
+        </p>
+
+        <div class="grid grid-cols-2 md-grid-cols-4 gap-4 mt-16">
+          <div class="industry-card" style="padding: 32px 16px;">
+            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #fff;">50+</div>
+            <p class="label" style="margin-top: 8px; opacity: 0.6;">Projects</p>
+          </div>
+          <div class="industry-card" style="padding: 32px 16px;">
+            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #fff;">16+</div>
+            <p class="label" style="margin-top: 8px; opacity: 0.6;">Happy Clients</p>
+          </div>
+          <div class="industry-card" style="padding: 32px 16px;">
+            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #fff;">5+</div>
+            <p class="label" style="margin-top: 8px; opacity: 0.6;">Countries</p>
+          </div>
+          <div class="industry-card" style="padding: 32px 16px;">
+            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: #fff;">98%</div>
+            <p class="label" style="margin-top: 8px; opacity: 0.6;">Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" style="padding: 40px 0;">
+    <div class="container">
+      <div class="flex flex-wrap justify-center gap-3 reveal-element">
+        <button class="filter-btn active px-6 py-2 rounded-full text-sm uppercase tracking-wider" data-filter="all"
+          style="background: #000; color: #fff; border: 1px solid #000;">All</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-sm uppercase tracking-wider" data-filter="website"
+          style="background: transparent; color: #000; border: 1px solid #ddd;">Websites</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-sm uppercase tracking-wider" data-filter="pos"
+          style="background: transparent; color: #000; border: 1px solid #ddd;">POS Systems</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-sm uppercase tracking-wider" data-filter="erp"
+          style="background: transparent; color: #000; border: 1px solid #ddd;">ERP & CRM</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-sm uppercase tracking-wider" data-filter="product"
+          style="background: transparent; color: #000; border: 1px solid #ddd;">Products</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light section-padding" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid md-grid-cols-2 gap-8 reveal-stagger">
+
+        <!-- Featured Projects -->
+        <section class="mb-16 animate-reveal-js" data-delay="0.3s">
+          <h2 class="font-display text-2xl md-text-3xl font-semibold mb-8 flex items-center">
+            <span class="text-gradient">Featured Projects</span>
+            <span
+              class="ml-4 px-3 py-1 text-xs uppercase tracking-wider bg-gradient-to-r from-blue-500-20 to-purple-500-20 rounded-full border border-blue-500-30">Highlighted</span>
+          </h2>
+
+          <div class="grid md-grid-cols-2 gap-6">
+
+            <!-- Featured: Denvik EU -->
+            <a href="https://www.denvik.eu/" target="_blank" rel="noopener noreferrer"
+              class="industry-card portfolio-card reveal-element" data-category="website">
+              <div class="industry-icon">
+                <img src="image/portfolio_logo/denvikeu.png" alt="Denvik Europe Logo" style="height:40px;max-width:80px;object-fit:contain;" />
+              </div>
+              <h3>Denvik Europe</h3>
+              <p style="opacity: 0.7; margin-bottom: 16px;">Multi-language corporate website for European tech company.
+                Includes German, French, English translations.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">Multi-Language</span>
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">SEO</span>
+              </div>
+            </a>
+
+            <!-- Featured: Right Choice Contracting -->
+            <a href="https://www.rightchoicecontracting.com/" target="_blank" rel="noopener noreferrer"
+              class="industry-card portfolio-card reveal-element" data-category="website">
+              <div class="industry-icon">
+                <img src="image/portfolio_logo/RIGHT%20CHOICElogo.png" alt="Right Choice Contracting Logo" style="height:40px;max-width:80px;object-fit:contain;" />
+              </div>
+              <h3>Right Choice Contracting</h3>
+              <p style="opacity: 0.7; margin-bottom: 16px;">Professional contracting company website based in Qatar.
+                Features project showcase and service listings.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">Construction</span>
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">Qatar</span>
+              </div>
+            </a>
+
+            <!-- Featured: Meta Giants ERP -->
+            <div class="industry-card portfolio-card reveal-element" data-category="erp">
+              <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg></div>
+              <h3>Meta Giants ERP</h3>
+              <p style="opacity: 0.7; margin-bottom: 16px;">Full enterprise resource planning system with inventory, HR,
+                accounting, and multi-branch management.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">ERP</span>
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">Enterprise</span>
+              </div>
+            </div>
+
+            <!-- Featured: Atom Infra -->
+            <a href="https://atominfra.in/" target="_blank" rel="noopener noreferrer"
+              class="industry-card portfolio-card reveal-element" data-category="website">
+              <div class="industry-icon">
+                <img src="image/portfolio_logo/atominfra_logo.png" alt="Atom Infra Logo" style="height:40px;max-width:80px;object-fit:contain;" />
+              </div>
+              <h3>Atom Infra</h3>
+              <p style="opacity: 0.7; margin-bottom: 16px;">Construction company website with 360° AR project
+                visualization. Interactive property tours.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">AR/VR</span>
+                <span class="label"
+                  style="font-size: 0.7rem; padding: 4px 8px; background: rgba(0,0,0,0.05); border: 1px solid #eee;">Real
+                  Estate</span>
+              </div>
+            </a>
+
+            <!-- PD TurboTech -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                <img src="image/portfolio_logo/pdturbotech_logo.jpg" alt="PD TurboTech Logo" style="height:40px;max-width:80px;object-fit:contain;" />
+              </div>
+              <h3>PD TurboTech</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Auto parts retail POS with barcode scanning and inventory
+                alerts.</p>
+              <span class="label" style="font-size: 0.7rem; color: #ef4444;">Automotive</span>
+            </div>
+
+            <!-- Safuu Clothing -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" />
+                </svg></div>
+              <h3>Safuu Clothing</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Fashion store POS with size/color variants and WhatsApp
+                receipts.</p>
+              <span class="label" style="font-size: 0.7rem; color: #ec4899;">Fashion Retail</span>
+            </div>
+
+            <!-- Insta Cafe -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                  <line x1="6" y1="1" x2="6" y2="4" />
+                  <line x1="10" y1="1" x2="10" y2="4" />
+                  <line x1="14" y1="1" x2="14" y2="4" />
+                </svg></div>
+              <h3>Insta Cafe</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Mobile-first cafe POS with quick menu and table
+                management.</p>
+              <span class="label" style="font-size: 0.7rem; color: #f59e0b;">F&B</span>
+            </div>
+
+            <!-- Moon Cake -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg></div>
+              <h3>Moon Cake Bakery</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Bakery POS with recipe costing and expiry tracking.</p>
+              <span class="label" style="font-size: 0.7rem; color: #8b5cf6;">Bakery</span>
+            </div>
+
+            <!-- High Surplus -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10h-6V4l-9 8h6v6l9-8z" />
+                </svg></div>
+              <h3>High Surplus & Hustle</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Multi-store retail POS with centralized inventory sync.</p>
+              <span class="label" style="font-size: 0.7rem; color: #3b82f6;">Retail</span>
+            </div>
+
+            <!-- ZToyStore -->
+            <div class="industry-card portfolio-card reveal-element" data-category="pos">
+              <div class="industry-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg></div>
+              <h3>ZToyStore</h3>
+              <p style="opacity: 0.7; margin-bottom: 12px;">Toy retail POS with age-category filtering.</p>
+              <span class="label" style="font-size: 0.7rem; color: #10b981;">Retail</span>
+            </div>
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+      </div>
+    </div>
+    <p class="text-white-70 text-sm leading-relaxed">"The photo selection tool changed my workflow
+      completely.
+      Clients can now pick photos from mobile, no more endless WhatsApp messages!"</p>
+    <div class="mt-4 pt-4 border-t border-white-10">
+      <span class="text-xs text-pink-400 uppercase tracking-wider">Wedding Photography</span>
+    </div>
+    </div>
+
+    <!-- Testimonial Card 2 -->
+    <div class="flex-shrink-0 w-80 md-w-96 snap-center glass rounded-2xl p-6 border-l-4 border-indigo-500">
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl">
+          MG
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-lg">Meta Giants</h4>
+          <div class="flex gap-0.5">
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="text-white-70 text-sm leading-relaxed">"Complete ERP with payroll, project tracking, client
+        management - everything in one system. Our productivity doubled!"</p>
+      <div class="mt-4 pt-4 border-t border-white-10">
+        <span class="text-xs text-indigo-400 uppercase tracking-wider">Digital Agency</span>
+      </div>
+    </div>
+
+    <!-- Testimonial Card 3 -->
+    <div class="flex-shrink-0 w-80 md-w-96 snap-center glass rounded-2xl p-6 border-l-4 border-green-500">
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold text-xl">
+          GF
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-lg">HiTech Goat Farm</h4>
+          <div class="flex gap-0.5">
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="text-white-70 text-sm leading-relaxed">"From paper registers to digital token system - now I
+        track every goat, every sale, every expense. Modern farming made easy!"</p>
+      <div class="mt-4 pt-4 border-t border-white-10">
+        <span class="text-xs text-green-400 uppercase tracking-wider">Agriculture Tech</span>
+      </div>
+    </div>
+
+    <!-- Testimonial Card 4 -->
+    <div class="flex-shrink-0 w-80 md-w-96 snap-center glass rounded-2xl p-6 border-l-4 border-cyan-500">
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+          HS
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-lg">High Surplus</h4>
+          <div class="flex gap-0.5">
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="text-white-70 text-sm leading-relaxed">"Managing 2 stores from one app is amazing. Unified
+        billing, real-time stock updates - exactly what I needed for my fashion business."</p>
+      <div class="mt-4 pt-4 border-t border-white-10">
+        <span class="text-xs text-cyan-400 uppercase tracking-wider">Fashion Retail</span>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Scroll Hint -->
+    <div class="text-center mt-4 text-white-40 text-sm">
+      <span>← Swipe to see more →</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- Our Products Section -->
+  <section class="mb-16 animate-reveal-js" data-delay="0.6s">
+    <h2 class="font-display text-2xl md-text-3xl font-semibold mb-8 flex items-center">
+      <span class="text-gradient-purple">Our Products</span>
+      <span class="ml-4 px-3 py-1 text-xs uppercase tracking-wider bg-purple-500-10 text-purple-300 rounded-full">Built
+        by Z3Connect</span>
+    </h2>
+
+    <div class="grid md-grid-cols-2 lg-grid-cols-3 gap-6">
+
+      <!-- Z Bills -->
+      <a href="https://zbills.z3connect.com/" target="_blank" rel="noopener noreferrer"
+        class="portfolio-card group glass rounded-xl overflow-hidden gradient-border" data-category="product">
+        <div class="h-40 bg-gradient-to-br from-cyan-900-40 to-teal-900-40 flex items-center justify-center relative">
+          <img src="image/portfolio_logo/7.png" alt="Z Bills" class="w-20 h-20 object-contain">
+          <div class="absolute top-3 right-3 px-2 py-1 text-xs bg-cyan-500-30 text-cyan-200 rounded-full">SaaS
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold mb-2 hover-text-gradient transition-all">Z Bills
+          </h3>
+          <p class="text-white-50 text-sm mb-3">Cloud billing solution with invoice generation & payment tracking
+          </p>
+          <span class="inline-block px-2 py-1 text-xs bg-cyan-500-10 text-cyan-300 rounded-full">Billing</span>
+        </div>
+      </a>
+
+      <!-- Z3 Connect CRM -->
+      <a href="https://crm.z3connect.com/" target="_blank" rel="noopener noreferrer"
+        class="portfolio-card group glass rounded-xl overflow-hidden gradient-border" data-category="product">
+        <div class="h-40 bg-gradient-to-br from-blue-900-40 to-indigo-900-40 flex items-center justify-center relative">
+          <img src="image/portfolio_logo/10.png" alt="Z3 Connect CRM" class="w-20 h-20 object-contain">
+          <div class="absolute top-3 right-3 px-2 py-1 text-xs bg-blue-500-30 text-blue-200 rounded-full">SaaS
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold mb-2 hover-text-gradient transition-all">Z3 Connect
+            CRM</h3>
+          <p class="text-white-50 text-sm mb-3">Customer relationship management with lead tracking & automation
+          </p>
+          <span class="inline-block px-2 py-1 text-xs bg-blue-500-10 text-blue-300 rounded-full">CRM</span>
+        </div>
+      </a>
+
+      <!-- Z2 Learn -->
+      <a href="https://www.z2learn.com/" target="_blank" rel="noopener noreferrer"
+        class="portfolio-card group glass rounded-xl overflow-hidden gradient-border" data-category="product">
+        <div class="h-40 bg-gradient-to-br from-pink-900-40 to-rose-900-40 flex items-center justify-center relative">
+          <img src="image/portfolio_logo/8.png" alt="Z2 Learn" class="w-20 h-20 object-contain">
+          <div class="absolute top-3 right-3 px-2 py-1 text-xs bg-pink-500-30 text-pink-200 rounded-full">EdTech
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold mb-2 hover-text-gradient transition-all">Z2 Learn
+          </h3>
+          <p class="text-white-50 text-sm mb-3">E-learning platform with courses, quizzes & progress tracking</p>
+          <span class="inline-block px-2 py-1 text-xs bg-pink-500-10 text-pink-300 rounded-full">Education</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Video Demos Section -->
+  <section class="mb-16 animate-reveal-js" data-delay="0.7s">
+    <h2 class="font-display text-2xl md-text-3xl font-semibold mb-8 text-center">
+      <span class="text-gradient">See Our Software in Action</span>
+    </h2>
+
+    <div class="grid md-grid-cols-2 gap-6">
+      <div class="glass rounded-2xl overflow-hidden">
+        <div class="aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/i83UgxVBerw?si=KHZcQEvFpOLiHJ8K"
+            title="Mobile Billing System Demo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="font-display font-semibold mb-1">Mobile Billing System</h3>
+          <p class="text-white-50 text-sm">Quick POS for on-the-go businesses</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl overflow-hidden">
+        <div class="aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/wetnpsJUv-A?si=xSKSoEiquX5fRWjr"
+            title="Clothing Store POS Demo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="p-4">
+          <h3 class="font-display font-semibold mb-1">Clothing Store POS</h3>
+          <p class="text-white-50 text-sm">Fashion retail with variant management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="mb-8 animate-reveal-js" data-delay="0.8s">
+    <div class="glass rounded-3xl p-8 md-p-12 text-center bg-gradient-to-br from-blue-900-20 to-purple-900-20">
+      <h2 class="font-display text-3xl md-text-4xl font-bold mb-4">
+        <span class="text-gradient">Ready to Build Something Amazing?</span>
+      </h2>
+      <p class="text-white-70 text-lg mb-8 max-w-2xl mx-auto">
+        Whether you need a POS system, website, or custom software solution, we're here to help bring your vision
+        to
+        life.
+      </p>
+      <div class="flex flex-col sm-flex-row gap-4 justify-center">
+        <a href="get-quote.html"
+          class="btn-glow inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500-30 to-purple-500-30 hover-bg-gradient-to-r hover-from-blue-500-40 hover-to-purple-500-40 text-white rounded-full text-sm uppercase tracking-wider backdrop-blur-xl border border-white-10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          Get a Free Quote
+        </a>
+        <a href="https://wa.me/919360220928" target="_blank" rel="noopener"
+          class="btn-glow inline-flex items-center justify-center px-8 py-4 glass hover-bg-white-10 text-white rounded-full text-sm uppercase tracking-wider backdrop-blur-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </div>
+  </main>
+
+  <!-- Tamil Nadu Service FAQ (Portfolio) -->
+  <section class="py-12 md-py-20 px-4 md-px-16">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8 md-mb-12">
+        <p class="uppercase tracking-[0.2em] text-xs text-white-50 mb-2">Tamil Nadu Focus</p>
+        <h2 class="font-display text-3xl md-text-5xl font-semibold">Local Rollout FAQ</h2>
+        <p class="text-white-70 mt-3">Chennai to Coimbatore—rapid POS, booking, and web deployments with Tamil
+          localization.</p>
+      </div>
+      <div class="grid md-grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="font-display text-lg font-semibold mb-2">Chennai deployment speed?</h3>
+          <p class="text-white-70 text-sm leading-relaxed">Typical POS/booking go-live in 7-10 days including data
+            import and training.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="font-display text-lg font-semibold mb-2">Coimbatore aftercare?</h3>
+          <p class="text-white-70 text-sm leading-relaxed">On-site kickoff plus WhatsApp-first support and remote
+            monitoring.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="font-display text-lg font-semibold mb-2">Tamil / bilingual sites?</h3>
+          <p class="text-white-70 text-sm leading-relaxed">Yes—bilingual content, receipts, and notifications for
+            local
+            audiences.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <p class="text-white-70 text-sm leading-relaxed">MSME-friendly options? Starter bundles, phased rollouts, and flexible payment
+            terms
+            for Tamil Nadu MSMEs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section (Copied from main page, ensure paths are relative if needed) -->
+  <footer class="relative pt-20 pb-10 px-4 md-px-16 overflow-hidden mt-20">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-indigo-950-10 to-black"></div>
+
+    <!-- Floating orbs -->
+    <div class="absolute bottom-0 left-[10%] w-32 h-32 md-w-48 md-h-48 bg-blue-500-10 rounded-full blur-3xl"></div>
+    <div class="absolute top-[30%] right-[10%] w-40 h-40 md-w-64 md-h-64 bg-purple-500-10 rounded-full blur-3xl">
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Footer main content -->
+      <div class="grid grid-cols-1 md-grid-cols-2 gap-12 md-gap-20">
+        <!-- Left side - Contact Info -->
+        <div>
+          <h2 class="font-display text-3xl md-text-4xl font-semibold mb-8">
+            <span class="text-gradient">Get in Touch</span>
+          </h2>
+
+          <!-- Glass contact card -->
+          <div class="glass rounded-2xl p-8 backdrop-blur-lg">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-16 mr-4 rounded-full gradient-border overflow-hidden">
+                <img src="/image/z3connect.bmp" alt="Z3Connect" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-xl md-text-2xl font-display font-medium">Z3Connect</h3>
+                <p class="text-white-70 text-sm">Digital Solutions Provider</p>
+              </div>
+            </div>
+
+            <!-- Contact details -->
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="w-10 h-10 flex-shrink-0 glass rounded-lg flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm uppercase tracking-wider text-white-50 mb-1">WhatsApp</div>
+                  <a href="https://wa.me/919360220928" target="_blank" rel="noopener"
+                    class="text-white hover-text-gradient transition-colors">+91 9360220928</a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-10 h-10 flex-shrink-0 glass rounded-lg flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm uppercase tracking-wider text-white-50 mb-1">Email</div>
+                  <a href="mailto:z3connect.office@gmail.com"
+                    class="text-white hover-text-gradient transition-colors">z3connect.office@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-10 h-10 flex-shrink-0 glass rounded-lg flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm uppercase tracking-wider text-white-50 mb-1">Location</div>
+                  <div class="text-white">Nagercoil, Kanyakumari District</div>
+                  <div class="text-white-70 text-sm">Tamil Nadu, India</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick contact buttons -->
+            <div class="mt-8 flex flex-col sm-flex-row sm-items-center gap-4">
+              <a href="https://wa.me/919360220928" target="_blank" rel="noopener"
+                class="btn-glow flex items-center justify-center px-5 py-3 bg-white-10 hover-bg-white-20 rounded-lg transition-colors backdrop-blur-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span>WhatsApp Me</span>
+              </a>
+              <a href="mailto:z3connect.office@gmail.com"
+                class="flex items-center justify-center px-5 py-3 border border-white-10 hover-border-white-30 rounded-lg transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>Email Me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side - Quick Form and Service List -->
+        <div>
+          <div class="glass rounded-2xl overflow-hidden backdrop-blur-lg h-full">
+            <!-- Quick contact form -->
+            <div class="p-8">
+              <h3 class="text-xl md-text-2xl font-display font-medium mb-6">Send a Message</h3>
+
+              <form action="#" method="POST">
+                <div class="mb-4">
+                  <label for="footer-name" class="glass-label">FULL NAME</label>
+                  <input type="text" id="footer-name" name="name" placeholder="John Doe"
+                    class="glass-input">
+                </div>
+
+                <div class="mb-4">
+                  <label for="footer-email" class="glass-label">BUSINESS EMAIL</label>
+                  <input type="email" id="footer-email" name="email" placeholder="john@example.com"
+                    class="glass-input">
+                </div>
+
+                <div class="mb-4">
+                  <label for="footer-service" class="glass-label">PROJECT TYPE</label>
+                  <select id="footer-service" name="service"
+                    class="glass-input">
+                    <option value="">Select a service</option>
+                    <option value="website">Website Development</option>
+                    <option value="app">Mobile App Development</option>
+                    <option value="billing">Billing System</option>
+                    <option value="management">Management Software</option>
+                    <option value="automation">Automation & WhatsApp Tools</option>
+                    <option value="other">Other Project</option>
+                  </select>
+                </div>
+
+                <div class="mb-6">
+                  <label for="footer-message" class="glass-label">YOUR INQUIRY</label>
+                  <textarea id="footer-message" name="message" rows="4" placeholder="How can we help you?"
+                    class="glass-input"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="btn-glow w-full flex items-center justify-center px-5 py-3 bg-white-10 hover-bg-white-20 rounded-lg transition-all backdrop-blur-sm border border-white-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span class="font-medium">Send Message</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Our services list -->
+            <div class="border-t border-white-10 p-8">
+              <h4 class="text-lg font-medium mb-4">Our Services</h4>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Website Development</span>
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Mobile App Development</span>
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Billing Systems & Software</span>
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>School & Business Management</span>
+                </li>
+                <li class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-blue-400 flex-shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>WhatsApp Automation Tools</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="mt-16 pt-8 border-t border-white-10 flex flex-col md-flex-row justify-between items-center">
+        <div class="mb-6 md-mb-0">
+          <div class="text-center md-text-left">
+            <a href="index.html" class="text-xl font-display font-medium text-gradient">Z3Connect</a>
+          </div>
+          <div class="text-white-50 text-sm mt-2 text-center md-text-left">
+            © 2025 All rights reserved
+          </div>
+          <div class="flex gap-4 mt-2 text-center md-text-left justify-center md-justify-start">
+            <a href="privacy-policy.html" class="text-white-50 text-sm hover-text-white transition-colors">Privacy
+              Policy</a>
+            <a href="terms.html" class="text-white-50 text-sm hover-text-white transition-colors">Terms</a>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="flex items-center space-x-4">
+          <a href="#"
+            class="w-10 h-10 glass rounded-full flex items-center justify-center hover-bg-white-10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+            </svg>
+          </a>
+          <a href="mailto:z3connect.office@gmail.com"
+            class="w-10 h-10 glass rounded-full flex items-center justify-center hover-bg-white-10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="#"
+            class="w-10 h-10 glass rounded-full flex items-center justify-center hover-bg-white-10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </a>
+          <a href="https://wa.me/919360220928" target="_blank" rel="noopener"
+            class="w-10 h-10 glass rounded-full flex items-center justify-center hover-bg-white-10 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Back to top button -->
+      <div class="flex justify-center mt-10">
+        <a href="#" id="backToTopCaseStudy"
+          class="inline-flex items-center px-4 py-2 glass rounded-full text-sm hover-glass-hover transition-all">
+          <span class="mr-2">Back to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+</body>
+
+</html>

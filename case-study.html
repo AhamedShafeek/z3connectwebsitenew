@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study - Z3Connect</title>
+  <link rel="icon" href="/image/icon/z3icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" href="image/logo0.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/logo0.png">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+  <div class="noise"></div>
+
+  <header class="fixed top-0 left-0 w-full z-50 px-4 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-xl font-display font-medium tracking-wider">
+        <span class="text-gradient">Z3Connect</span>
+      </a>
+
+      <nav class="hidden md-block">
+        <ul class="flex items-center space-x-1">
+          <li><a href="index.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Home</a>
+          </li>
+          <li><a href="about.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">About</a>
+          </li>
+          <li><a href="solutions-detailed.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Solutions</a>
+          </li>
+          <li><a href="products.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Products</a>
+          </li>
+          <li><a href="portfolio.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Portfolio</a>
+          </li>
+          <li><a href="clients.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Clients</a>
+          </li>
+          <li><a href="get-quote.html"
+              class="inline-block py-2 px-4 rounded-lg text-sm uppercase tracking-widest opacity-70 hover-opacity-100 hover-glass transition-all">Get
+              a Quote</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobile-menu-button" class="md-hidden glass p-2 rounded-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="mobile-menu-close" class="absolute top-5 right-5 p-3 glass rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <ul class="flex flex-col items-center space-y-6">
+      <li><a href="index.html" class="text-3xl font-display uppercase tracking-wider opacity-70">Home</a></li>
+      <li><a href="about.html" class="text-3xl font-display uppercase tracking-wider opacity-70">About</a></li>
+      <li><a href="solutions-detailed.html"
+          class="text-3xl font-display uppercase tracking-wider opacity-70">Solutions</a></li>
+      <li><a href="products.html" class="text-3xl font-display uppercase tracking-wider opacity-70">Products</a></li>
+      <li><a href="portfolio.html" class="text-3xl font-display uppercase tracking-wider opacity-70">Portfolio</a></li>
+      <li><a href="clients.html" class="text-3xl font-display uppercase tracking-wider opacity-70">Clients</a></li>
+      <li><a href="get-quote.html" class="text-3xl font-display uppercase tracking-wider opacity-70">Get Quote</a></li>
+    </ul>
+  </div>
+
+  <section class="relative pt-32 pb-12 px-4 md-px-16">
+    <div class="absolute inset-0 bg-gradient-radial from-blue-900-20 via-black to-black"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      <a href="case-studies.html"
+        class="inline-flex items-center text-sm uppercase tracking-wider text-white-70 hover-text-white mb-8 transition-opacity">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Back to Case Studies</span>
+      </a>
+
+      <div class="mb-8">
+        <span class="px-3 py-1 glass rounded-full text-xs uppercase tracking-wider">Retail</span>
+      </div>
+
+      <h1 class="font-display text-4xl sm-text-5xl md-text-6xl font-bold mb-6 leading-tight">
+        Multi-Store Retail POS System
+      </h1>
+
+      <p class="text-xl md-text-2xl opacity-80 leading-relaxed">
+        Mobile billing system with real-time inventory sync reducing daily admin work from 3 hours to 20 minutes.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative py-12 px-4 md-px-16">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Client Context</h2>
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p>A retail chain with 5 locations across Tamil Nadu selling home appliances and electronics. Team of 12 staff
+            members across stores. Monthly revenue of ₹40-50 lakhs.</p>
+          <p>Owner spent 2-3 hours daily consolidating sales data from handwritten bills and Excel sheets. No real-time
+            inventory visibility led to frequent stockouts and overstocking.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">The Problem</h2>
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Manual Billing Process</h3>
+              <p class="opacity-80">Handwritten bills leading to calculation errors, slow checkout times, and no digital
+                records for analysis.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">No Inventory Visibility</h3>
+              <p class="opacity-80">Stock levels tracked manually in notebooks. No way to check stock across locations.
+                Frequent emergency transfers between stores.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Time-Consuming Reporting</h3>
+              <p class="opacity-80">Owner spent 3 hours every evening consolidating data from 5 stores manually in Excel
+                to understand daily performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Our Solution</h2>
+        <div class="space-y-6">
+          <p class="text-lg opacity-90 leading-relaxed">We built a custom mobile POS system using React Native, Node.js
+            backend, and real-time Firebase sync. Deployed across all 5 locations with offline-first architecture.</p>
+
+          <div class="grid grid-cols-1 md-grid-cols-2 gap-6 mt-8">
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Mobile POS</h3>
+              <p class="text-sm opacity-80">Fast billing with barcode scanning, product search, automatic tax
+                calculation, and instant digital invoices.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Real-Time Inventory</h3>
+              <p class="text-sm opacity-80">Live stock levels across all locations. Auto-alerts for low stock.
+                Inter-store transfer tracking.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Auto Reporting</h3>
+              <p class="text-sm opacity-80">Daily sales reports generated automatically. Store-wise performance.
+                Product-wise analytics. Expense tracking.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Offline Mode</h3>
+              <p class="text-sm opacity-80">Works without internet. Syncs when connection restored. Zero downtime during
+                network issues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Implementation</h2>
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p><strong>Week 1:</strong> Requirements gathering and workflow mapping. Tested pilot version at one store
+            with 2 staff members.</p>
+          <p><strong>Week 2:</strong> Refined based on feedback. Added barcode scanner support. Built product catalog
+            migration tool.</p>
+          <p><strong>Week 3:</strong> Full rollout across all 5 locations. On-site training for all staff. Live support
+            for first week.</p>
+          <p><strong>Ongoing:</strong> Weekly check-ins. Feature updates based on usage patterns. System monitoring and
+            optimization.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Results & Impact</h2>
+        <div class="grid grid-cols-1 md-grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">3hrs → 20min</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Daily Admin Time</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">60%</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Faster Checkouts</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">Zero</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Stock Errors</div>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p>Owner now gets daily performance reports automatically on WhatsApp. Real-time visibility into which
+            products are selling, which stores are performing, and exact stock levels.</p>
+          <p>Staff spend zero time on manual calculations. Checkout is faster. Customers get professional digital
+            invoices. No more stockouts or emergency transfers.</p>
+          <p>Business operates like a tech company — with data, analytics, and automation — while staying affordable for
+            MSME scale.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-4">Technologies Used</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 glass rounded-full text-sm">React Native</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Node.js</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Firebase</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">MongoDB</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Mobile POS</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Real-time Sync</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-20 px-4 md-px-16">
+    <div class="max-w-5xl mx-auto relative z-10 text-center">
+      <div class="glass rounded-2xl p-12 md-p-16">
+        <h2 class="font-display text-3xl md-text-5xl font-bold mb-6">
+          Need a similar system for your business?
+        </h2>
+        <p class="text-xl mb-10 opacity-80">
+          We build custom automation for MSMEs across all industries.
+        </p>
+        <div class="flex flex-col sm-flex-row gap-6 justify-center">
+          <a href="get-quote.html"
+            class="glass px-8 py-4 rounded-full hover-glass-hover transition-all inline-flex items-center justify-center">
+            <span class="text-sm uppercase tracking-wider">Get a Quote</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="case-studies.html"
+            class="glass px-8 py-4 rounded-full hover-glass-hover transition-all inline-flex items-center justify-center">
+            <span class="text-sm uppercase tracking-wider">More Case Studies</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="relative pt-20 pb-10 px-4 md-px-16">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 md-grid-cols-3 gap-12 mb-16">
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-4 text-gradient">Z3Connect</h3>
+          <p class="text-white-70 text-sm mb-4">AI-Driven Automation for MSMEs</p>
+          <p class="text-white-50 text-sm">Kanyakumari, Tamil Nadu</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-white-70 hover-text-white transition-colors">About</a></li>
+            <li><a href="solutions-detailed.html" class="text-white-70 hover-text-white transition-colors">Solutions</a>
+            </li>
+            <li><a href="products.html" class="text-white-70 hover-text-white transition-colors">Products</a></li>
+            <li><a href="portfolio.html" class="text-white-70 hover-text-white transition-colors">Portfolio</a></li>
+            <li><a href="privacy-policy.html" class="text-white-70 hover-text-white transition-colors">Privacy
+                Policy</a></li>
+            <li><a href="terms.html" class="text-white-70 hover-text-white transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="mailto:z3connect.office@gmail.com"
+                class="text-white-70 hover-text-white transition-colors">z3connect.office@gmail.com</a></li>
+            <li><a href="https://wa.me/919360220928" class="text-white-70 hover-text-white transition-colors">+91
+                9360220928</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white-10 pt-8 text-center">
+        <p class="text-white-50 text-sm">© 2025 Z3Connect. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+</body>
+
+</html>
