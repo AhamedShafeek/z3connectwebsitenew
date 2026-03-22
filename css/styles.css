@@ -1462,7 +1462,7 @@ ol {
   border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 12px;
   padding: var(--space-8);
-  margin-bottom: var(--space-12);
+  margin: var(--space-12) auto 0;
   max-width: 400px;
 }
 
