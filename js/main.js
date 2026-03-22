@@ -20,20 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const floatingNav = document.querySelector('.floating-nav');
   let lastScrollY = 0;
   let ticking = false;
+  let hideNavTimeout = null;
 
   function updateNav() {
     if (!floatingNav) return;
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY + 10 && currentScrollY > 200) {
-      // Scrolling DOWN fast and past hero — hide nav
-      floatingNav.classList.add('nav-scrolled-down');
-      floatingNav.classList.remove('nav-scrolled-up');
-    } else if (currentScrollY < lastScrollY - 5) {
-      // Scrolling UP — show nav
-      floatingNav.classList.remove('nav-scrolled-down');
-      floatingNav.classList.add('nav-scrolled-up');
-    }
+    // Always show nav on scroll activity
+    floatingNav.classList.remove('nav-scrolled-down', 'nav-hidden');
+    
+    // Clear existing hide timer
+    if (hideNavTimeout) clearTimeout(hideNavTimeout);
+
+    // Hide after 2 seconds of inactivity
+    hideNavTimeout = setTimeout(() => {
+      // Only hide if we are not at the very top (optional, but usually better)
+      if (window.scrollY > 50) {
+        floatingNav.classList.add('nav-hidden');
+      }
+    }, 2000);
 
     lastScrollY = currentScrollY;
     ticking = false;
