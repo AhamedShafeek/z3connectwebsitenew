@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Z3Connect Case Study - We build automation tools for MSMEs.">
+  <title>Fleet Tracking & Mobile App Case Study | Z3Connect</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/image/icon/z3icon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/image/icon/z3icon.ico">
+
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+  </style>
+  <!-- Favicon -->
+  
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+  <div class="noise"></div>
+
+  <!-- FLOATING NAVIGATION -->
+  <nav class="floating-nav" id="floating-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <img src="logo0.png" alt="Z3Connect" class="nav-logo-img">
+      <span>Z3Connect</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item" data-dropdown="company">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Company<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="about.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg></span><span><strong>About us</strong><small>Who we are and what drives us</small></span></a>
+          <a href="founder.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></span><span><strong>Founder</strong><small>The mind behind Z3Connect</small></span></a>
+          <a href="philosophy.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg></span><span><strong>Philosophy</strong><small>How we think and build</small></span></a>
+          <a href="team.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg></span><span><strong>Team</strong><small>Meet the people building the future</small></span></a>
+          <a href="why-we-exist.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></span><span><strong>Why we exist</strong><small>Our purpose and mission</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="products">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Products<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="products.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4M4 7l8 4M4 7v10l8 4m0-10v10" />
+              </svg></span><span><strong>All products</strong><small>Our complete product suite</small></span></a>
+          <a href="solutions-detailed.html" class="nav-dropdown-link" role="menuitem"><span
+              class="nav-dropdown-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg></span><span><strong>Solutions</strong><small>Industry-specific software</small></span></a>
+        </div>
+      </div>
+      <div class="nav-item" data-dropdown="work">
+        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Work<svg
+            class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="work.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m12 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z" />
+              </svg></span><span><strong>Portfolio</strong><small>Projects we've delivered</small></span></a>
+          <a href="case-studies.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg></span><span><strong>Case studies</strong><small>Real results, real impact</small></span></a>
+          <a href="clients.html" class="nav-dropdown-link" role="menuitem"><span class="nav-dropdown-icon"><svg
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg></span><span><strong>Clients</strong><small>100+ businesses we've powered</small></span></a>
+        </div>
+      </div>
+      <a href="blogs.html" class="nav-link">Blogs</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="get-quote.html" class="nav-cta">Get quote</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <div class="mobile-menu-links">
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Company<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="about.html" class="mobile-menu-sublink">About us</a>
+          <a href="founder.html" class="mobile-menu-sublink">Founder</a>
+          <a href="philosophy.html" class="mobile-menu-sublink">Philosophy</a>
+          <a href="team.html" class="mobile-menu-sublink">Team</a>
+          <a href="why-we-exist.html" class="mobile-menu-sublink">Why we exist</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Products<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="products.html" class="mobile-menu-sublink">All products</a>
+          <a href="solutions-detailed.html" class="mobile-menu-sublink">Solutions</a>
+        </div>
+      </div>
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-group-title" aria-expanded="false">Work<svg class="mobile-nav-chevron"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg></button>
+        <div class="mobile-nav-group-links">
+          <a href="work.html" class="mobile-menu-sublink">Portfolio</a>
+          <a href="case-studies.html" class="mobile-menu-sublink">Case studies</a>
+          <a href="clients.html" class="mobile-menu-sublink">Clients</a>
+        </div>
+      </div>
+      <a href="blogs.html" class="mobile-menu-link">Blogs</a>
+      <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+    <a href="get-quote.html" class="mobile-menu-cta">Get a quote</a>
+  </div>
+
+
+  <section class="relative pt-32 pb-12 px-4 md-px-16">
+    <div class="absolute inset-0 bg-gradient-radial from-blue-900-20 via-black to-black"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      <a href="case-studies.html"
+        class="inline-flex items-center text-sm uppercase tracking-wider text-white-70 hover-text-white mb-8 transition-opacity">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Back to Case Studies</span>
+      </a>
+
+      <div class="flex items-center gap-6 mb-8 flex-wrap"><img src="image/portfolio_logo/pocketdeliverywordlogo.svg" alt="Fleet Tracking & Mobile App Logo" class="h-16 w-auto object-contain glass p-2 rounded-xl"><span class="px-3 py-1 glass rounded-full text-xs uppercase tracking-wider">Logistics</span></div>
+
+      <h1 class="font-display text-4xl sm-text-5xl md-text-6xl font-bold mb-6 leading-tight">
+        Fleet Tracking & Mobile App
+      </h1>
+
+      <p class="text-xl md-text-2xl opacity-80 leading-relaxed">
+        Reduced late deliveries by 35% through real-time route optimization and automated dispatching.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative py-12 px-4 md-px-16">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Client Context</h2>
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p>Pocket Delivery is an agile urban logistics startup. Managing a growing fleet of riders with basic chat apps and spreadsheets was causing massive inefficiencies, missed delivery windows, and poor customer communication.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">The Problem</h2>
+        <div class="space-y-6">
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Inefficient Dispatch</h3>
+              <p class="opacity-80">Dispatchers manually assigned orders to riders based on guesswork, resulting in overlapping routes.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">No Live Tracking</h3>
+              <p class="opacity-80">Customers called headquarters constantly to ask where their packages were.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 glass rounded-lg flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Payment Disputes</h3>
+              <p class="opacity-80">Cash-on-delivery tracking was manual, leading to complex reconciliation at the end of shifts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Our Solution</h2>
+        <div class="space-y-6">
+          <div class="text-lg opacity-90 leading-relaxed"><p>We created a powerful dual-interface platform: a live operational dashboard for dispatchers and a streamlined mobile app for the delivery fleet.</p></div>
+
+          <div class="grid grid-cols-1 md-grid-cols-2 gap-6 mt-8">
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Smart Routing</h3>
+              <p class="text-sm opacity-80">Algorithms automatically compute and assign the most efficient delivery sequence for riders.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Live GPS Tracking</h3>
+              <p class="text-sm opacity-80">Real-time rider locations are visible to dispatch and optionally shared via SMS links with customers.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Digital Proof of Delivery</h3>
+              <p class="text-sm opacity-80">Riders capture signatures and photos in-app, instantly syncing to the central database.</p>
+            </div>
+
+            <div class="glass rounded-xl p-6">
+              <h3 class="text-lg font-semibold mb-3">Automated COD Reconciliation</h3>
+              <p class="text-sm opacity-80">The app tracks exact cash collected versus expected, making end-of-day balances trivial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Implementation</h2>
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p><strong>Sprint 1:</strong> GPS integration and algorithmic routing design.</p><p><strong>Sprint 2:</strong> Rider app development and central dispatcher dashboard construction.</p><p><strong>Sprint 3:</strong> Field testing with 5 riders to calibrate routing algorithms, then full rollout.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12 mb-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-6">Results & Impact</h2>
+        <div class="grid grid-cols-1 md-grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">35%</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Fewer Late Deliveries</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">100%</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Route Optimization</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-display font-bold text-gradient mb-2">Zero</div>
+            <div class="text-sm uppercase tracking-wider opacity-70">Reconciliation Errors</div>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-lg leading-relaxed opacity-90">
+          <p>Delivery efficiency skyrocketed. Riders complete more deliveries per shift because routes are mathematically optimized, and customer support calls dropped by 60% due to the live tracking links.</p><p>The end-of-day cash reconciliation, which previously took hours, is now done in minutes.</p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 md-p-12">
+        <h2 class="font-display text-2xl md-text-3xl font-semibold mb-4">Technologies Used</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 glass rounded-full text-sm">Flutter</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Google Maps API</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">Node.js</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">WebSockets</span>
+          <span class="px-4 py-2 glass rounded-full text-sm">GPS Sync</span>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-20 px-4 md-px-16">
+    <div class="max-w-5xl mx-auto relative z-10 text-center">
+      <div class="glass rounded-2xl p-12 md-p-16">
+        <h2 class="font-display text-3xl md-text-5xl font-bold mb-6">
+          Need a similar system for your business?
+        </h2>
+        <p class="text-xl mb-10 opacity-80">
+          We build custom automation for MSMEs across all industries.
+        </p>
+        <div class="flex flex-col sm-flex-row gap-6 justify-center">
+          <a href="get-quote.html"
+            class="glass px-8 py-4 rounded-full hover-glass-hover transition-all inline-flex items-center justify-center">
+            <span class="text-sm uppercase tracking-wider">Get a Quote</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="case-studies.html"
+            class="glass px-8 py-4 rounded-full hover-glass-hover transition-all inline-flex items-center justify-center">
+            <span class="text-sm uppercase tracking-wider">More Case Studies</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section-dark footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Company -->
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="philosophy.html">Philosophy</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="founder.html">Founder</a></li>
+            <li><a href="why-we-exist.html">Why we exist</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Products -->
+        <div class="footer-column">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">All products</a></li>
+            <li><a href="solutions-detailed.html">ZAssist AI</a></li>
+            <li><a href="products.html#zpos">ZPOS</a></li>
+            <li><a href="products.html#zcrm">ZCRM</a></li>
+            <li><a href="products.html#inventory">ZInventory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Solutions -->
+        <div class="footer-column">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions-detailed.html#healthcare">Healthcare</a></li>
+            <li><a href="solutions-detailed.html#retail">Retail</a></li>
+            <li><a href="solutions-detailed.html#fb">F&B</a></li>
+            <li><a href="solutions-detailed.html#construction">Construction</a></li>
+            <li><a href="solutions-detailed.html#salons">Salons</a></li>
+            <li><a href="solutions-detailed.html#education">Education</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Portfolio -->
+        <div class="footer-column">
+          <h4>Portfolio</h4>
+          <ul>
+            <li><a href="work.html">Featured cases</a></li>
+            <li><a href="case-studies.html">Case studies</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Resources -->
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="get-quote.html">Get quote</a></li>
+            <li><a href="mailto:z3connect@gmail.com">Report issue</a></li>
+            <li><a href="philosophy.html">How we think</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 6: Legal -->
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms of service</a></li>
+            <li><a href="robots.txt">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-premium">
+        <div class="footer-brand-minimal">
+          <div class="nav-logo">
+            <img src="logo0.png" alt="Z3Connect" class="nav-logo-img">
+            <span>Z3Connect</span>
+          </div>
+          <p class="by-line">BY Z3CONNECT — Built in Tamil Nadu</p>
+        </div>
+        
+        <div class="footer-bottom-row">
+          <div class="footer-social-minimal">
+            <a href="https://linkedin.com/in/ahamedshafeek" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="https://wa.me/919360220928" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.481 8.415-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-2.652-.001-5.146 1.031-7.023 2.91s-2.909 4.373-2.91 7.029c0 2.251.644 4.012 1.626 5.688l-.993 3.62 3.72-.972zm11.454-7.384c-.131-.066-.772-.381-.89-.425-.119-.044-.206-.066-.293.066s-.336.425-.412.512-.152.099-.282.033c-.131-.066-.552-.204-1.05-.648-.387-.345-.648-.771-.724-.901s-.008-.201.057-.266c.059-.059.131-.152.196-.228.066-.076.088-.131.131-.218s.022-.163-.011-.228c-.033-.054-.293-.707-.402-.969-.106-.256-.214-.221-.293-.225-.076-.004-.163-.005-.25-.005s-.228.033-.347.163c-.119.131-.456.446-.456 1.087s.467 1.261.532 1.348c.066.087.918 1.402 2.226 1.965.311.134.553.214.743.275.313.099.598.085.823.051.25-.037.772-.315.88-.619s.109-.565.076-.619c-.033-.054-.119-.087-.25-.152z"/></svg></a>
+            <a href="https://instagram.com/z3connect" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="terms.html">Terms of service</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+</body>
+
+</html>

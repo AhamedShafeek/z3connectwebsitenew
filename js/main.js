@@ -21,6 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastScrollY = 0;
   let ticking = false;
   let hideNavTimeout = null;
+  let isNavHovered = false;
+
+  if (floatingNav) {
+    floatingNav.addEventListener('mouseenter', () => {
+      isNavHovered = true;
+      if (hideNavTimeout) clearTimeout(hideNavTimeout);
+      floatingNav.classList.remove('nav-hidden');
+    });
+
+    floatingNav.addEventListener('mouseleave', () => {
+      isNavHovered = false;
+      // Re-trigger hide timer if not at top
+      if (window.scrollY > 50) {
+        startHideTimer();
+      }
+    });
+  }
+
+  function startHideTimer() {
+    if (hideNavTimeout) clearTimeout(hideNavTimeout);
+    if (isNavHovered) return;
+
+    hideNavTimeout = setTimeout(() => {
+      if (window.scrollY > 50 && !isNavHovered) {
+        floatingNav.classList.add('nav-hidden');
+      }
+    }, 2000);
+  }
 
   function updateNav() {
     if (!floatingNav) return;
@@ -33,12 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hideNavTimeout) clearTimeout(hideNavTimeout);
 
     // Hide after 2 seconds of inactivity
-    hideNavTimeout = setTimeout(() => {
-      // Only hide if we are not at the very top (optional, but usually better)
-      if (window.scrollY > 50) {
-        floatingNav.classList.add('nav-hidden');
-      }
-    }, 2000);
+    startHideTimer();
 
     lastScrollY = currentScrollY;
     ticking = false;

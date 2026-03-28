@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAssist — Product Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#07090f; --surface:#0e1420; --s2:#131b2a; --s3:#1a2236;
+  --border:rgba(255,255,255,0.07); --accent:#00e8c6; --blue:#4f72ff;
+  --gold:#f5c53a; --red:#ff5f6d; --text:#dde4f0; --muted:#4f607e;
+}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:'DM Sans',sans-serif;color:var(--text)}
+
+.shell{
+  width:100vw;height:100vh;position:relative;
+  background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(79,114,255,0.08) 0%,transparent 70%);
+}
+.shell::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 3px,rgba(0,0,0,0.04) 4px);
+}
+
+/* ── BROWSER — natively responsive ── */
+.browser{
+  width: 100vw;
+  height: 100vh;
+  background:var(--surface);
+  box-shadow:none;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+
+.titlebar{background:var(--s2);border-bottom:1px solid var(--border);padding:.6rem 1.1rem;display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.dots{display:flex;gap:.42rem}
+.dots span{width:11px;height:11px;border-radius:50%}
+.dots span:nth-child(1){background:#ff5f57}
+.dots span:nth-child(2){background:#febc2e}
+.dots span:nth-child(3){background:#28c840}
+.urlbar{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:7px;padding:.28rem .9rem;font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:.4rem}
+.urlbar svg{width:11px;height:11px;opacity:.5;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2}
+
+.app{display:flex;flex:1;overflow:hidden}
+
+.sidebar{width:clamp(45px, 20vw, 185px);flex-shrink:0;background:var(--s2);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:1.1rem clamp(.2rem, 1vw, .7rem);gap:.28rem;transition:width 0.3s}
+.logo{font-family:'Syne',sans-serif;font-size:clamp(0px, 1.5vw, 1.05rem);font-weight:800;color:var(--accent);padding:.2rem .5rem;margin-bottom:.9rem;white-space:nowrap;overflow:hidden}
+.nav-item{display:flex;align-items:center;gap:.6rem;padding:clamp(.3rem, 1vh, .52rem) clamp(.3rem, 1vw, .65rem);border-radius:9px;font-size:clamp(0px, 1.2vw, .78rem);color:var(--muted);transition:all .2s;white-space:nowrap;overflow:hidden}
+.nav-item svg{width:clamp(14px, 1.5vw, 18px);height:clamp(14px, 1.5vw, 18px);flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2;margin:0 auto}
+.nav-item.active{background:rgba(0,232,198,0.1);color:var(--accent)}
+.nav-item.glow{background:rgba(0,232,198,0.15);color:var(--accent);box-shadow:inset 0 0 0 1px rgba(0,232,198,0.3)}
+
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden;padding:clamp(.5rem, 1vw, 1.1rem) clamp(.4rem, 1.5vw, 1.2rem)}
+.toprow{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-shrink:0}
+.page-title{font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700}
+.toprow-btns{display:flex;gap:.5rem}
+.chip{padding:.28rem .75rem;border-radius:7px;font-size:.72rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--muted);transition:all .2s}
+.chip.glow{background:rgba(0,232,198,0.12);border-color:rgba(0,232,198,.35);color:var(--accent)}
+
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-bottom:.85rem;flex-shrink:0}
+.stat{background:var(--s2);border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.stat.glow{border-color:rgba(0,232,198,.45);box-shadow:0 0 22px rgba(0,232,198,.1)}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--accent));opacity:.55}
+.stat-lbl{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.28rem}
+.stat-val{font-family:'Syne',sans-serif;font-size:1.38rem;font-weight:800}
+.stat-sub{font-size:.64rem;color:#00e5a0;margin-top:.15rem}
+
+.content-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;flex:1;min-height:0}
+
+.panel{background:var(--s2);border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.panel.glow{border-color:rgba(79,114,255,.45);box-shadow:0 0 22px rgba(79,114,255,.1)}
+.panel-head{padding:.55rem .9rem;border-bottom:1px solid var(--border);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:flex;align-items:center;gap:.45rem;flex-shrink:0}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#00e5a0;box-shadow:0 0 6px rgba(0,229,160,.7);animation:pdot 2s infinite}
+@keyframes pdot{0%,100%{opacity:1}50%{opacity:.25}}
+.messages{flex:1;padding:.7rem;display:flex;flex-direction:column;gap:.5rem;overflow:hidden}
+.msg{display:flex;gap:.45rem;align-items:flex-start;opacity:0;transform:translateY(5px);transition:opacity .35s,transform .35s}
+.msg.show{opacity:1;transform:none}
+.msg.user{flex-direction:row-reverse}
+.av{width:22px;height:22px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:700}
+.av.ai{background:rgba(0,232,198,.15);color:var(--accent);border:1px solid rgba(0,232,198,.3)}
+.av.u{background:rgba(79,114,255,.15);color:var(--blue);border:1px solid rgba(79,114,255,.3)}
+.bub{border-radius:9px;padding:.38rem .65rem;font-size:.74rem;line-height:1.5;max-width:84%}
+.bub.ai{background:rgba(0,232,198,.07);border:1px solid rgba(0,232,198,.12)}
+.bub.u{background:rgba(79,114,255,.12);border:1px solid rgba(79,114,255,.2)}
+.typing-dots{display:flex;gap:3px;padding:.38rem .65rem}
+.typing-dots span{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:td 1.2s infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes td{0%,80%,100%{opacity:.2}40%{opacity:1}}
+.input-row{padding:.45rem .7rem;border-top:1px solid var(--border);display:flex;gap:.45rem;align-items:center;flex-shrink:0}
+.fake-input{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:7px;padding:.35rem .65rem;font-size:.74rem;color:var(--text);transition:border-color .25s;min-height:28px;display:flex;align-items:center}
+.fake-input.focus{border-color:rgba(0,232,198,.4)}
+.caret{display:inline-block;width:1px;height:11px;background:var(--accent);margin-left:1px;vertical-align:middle;animation:car .75s infinite}
+@keyframes car{0%,100%{opacity:1}50%{opacity:0}}
+.send-btn{width:30px;height:30px;border-radius:7px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .15s}
+.send-btn svg{width:12px;height:12px;stroke:#07090f;fill:none;stroke-width:2.5}
+.send-btn.clicked{transform:scale(.85);box-shadow:0 0 12px rgba(0,232,198,.5)}
+
+.appt-panel{background:var(--s2);border:1px solid var(--border);border-radius:12px;display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.appt-panel.glow{border-color:rgba(245,197,58,.45);box-shadow:0 0 22px rgba(245,197,58,.08)}
+.appt-list{flex:1;padding:.55rem .75rem;display:flex;flex-direction:column;gap:.38rem;overflow:hidden}
+.appt-item{display:flex;align-items:center;gap:.55rem;padding:.45rem .6rem;border-radius:8px;background:rgba(255,255,255,.025);border:1px solid var(--border);font-size:.74rem;transition:border-color .25s,background .25s}
+.appt-item.glow{border-color:rgba(245,197,58,.4);background:rgba(245,197,58,.04)}
+.adot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.aname{font-weight:500;flex:1}
+.atime{color:var(--muted);font-size:.67rem}
+.abadge{font-size:.6rem;padding:.12rem .42rem;border-radius:4px;background:rgba(0,232,198,.12);color:var(--accent);border:1px solid rgba(0,232,198,.2);opacity:0;transition:opacity .25s;white-space:nowrap}
+.abadge.show{opacity:1}
+
+.auto-panel{background:var(--s2);border:1px solid var(--border);border-radius:12px;display:none;flex-direction:column;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.auto-panel.on{display:flex}
+.auto-panel.glow{border-color:rgba(255,95,109,.4);box-shadow:0 0 22px rgba(255,95,109,.08)}
+.flow-list{flex:1;padding:.7rem;display:flex;flex-direction:column;gap:.4rem}
+.flow-item{display:flex;align-items:center;gap:.6rem;padding:.48rem .65rem;border-radius:8px;background:rgba(255,255,255,.025);border:1px solid var(--border);font-size:.74rem;opacity:0;transform:translateX(-8px);transition:opacity .35s,transform .35s,border-color .25s,background .25s}
+.flow-item.show{opacity:1;transform:none}
+.flow-item.glow{border-color:rgba(255,95,109,.35);background:rgba(255,95,109,.04)}
+.ficon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ficon svg{width:12px;height:12px;fill:none;stroke-width:2}
+.fstatus{margin-left:auto;font-size:.62rem;padding:.1rem .38rem;border-radius:4px}
+.fstatus.on{background:rgba(0,229,160,.12);color:#00e5a0}
+.fstatus.off{background:rgba(255,255,255,.05);color:var(--muted)}
+
+/* ── CURSOR — absolute inside .browser ── */
+.cursor{position:absolute;width:20px;height:20px;pointer-events:none;z-index:950}
+.cursor svg{width:20px;height:20px;filter:drop-shadow(0 2px 5px rgba(0,0,0,.8))}
+.click-ring{position:absolute;top:50%;left:50%;width:28px;height:28px;border-radius:50%;border:2px solid var(--accent);transform:translate(-50%,-50%) scale(.4);opacity:.9;animation:cring .45s ease forwards;pointer-events:none}
+@keyframes cring{to{transform:translate(-50%,-50%) scale(1.8);opacity:0}}
+
+/* ── HIGHLIGHT RING — absolute inside .browser ── */
+.hring{position:absolute;border-radius:12px;pointer-events:none;z-index:900;border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(0,232,198,.1),0 0 28px rgba(0,232,198,.18);opacity:0;transition:opacity .3s,top .5s cubic-bezier(.4,0,.2,1),left .5s cubic-bezier(.4,0,.2,1),width .5s cubic-bezier(.4,0,.2,1),height .5s cubic-bezier(.4,0,.2,1)}
+
+/* ── TOOLTIP — absolute inside .browser ── */
+.tip{position:absolute;z-index:960;pointer-events:none;background:var(--s3);border:1px solid rgba(0,232,198,.3);border-radius:10px;padding:.55rem .9rem;font-size:.76rem;line-height:1.55;max-width:215px;box-shadow:0 8px 32px rgba(0,0,0,.65);opacity:0;transform:translateY(5px);transition:opacity .28s,transform .28s}
+.tip.show{opacity:1;transform:none}
+.tip b{color:var(--accent);font-family:'Syne',sans-serif;font-size:.78rem;display:block;margin-bottom:.18rem}
+.tip-arr{position:absolute;width:8px;height:8px;background:var(--s3);border-left:1px solid rgba(0,232,198,.3);border-top:1px solid rgba(0,232,198,.3)}
+.tip-arr.up{transform:rotate(45deg);top:-5px;left:18px}
+.tip-arr.dn{transform:rotate(225deg);bottom:-5px;left:18px}
+
+.slabel{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(10,16,28,.9);border:1px solid var(--border);border-radius:100px;padding:.28rem .95rem;font-size:.7rem;color:var(--muted);z-index:970;white-space:nowrap}
+.slabel em{color:var(--accent);font-style:normal}
+.pbar{position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--blue));z-index:980;width:0;transition:width .35s linear}
+.replay{position:absolute;bottom:12px;right:12px;z-index:980;background:rgba(0,232,198,.1);border:1px solid rgba(0,232,198,.25);color:var(--accent);font-family:'DM Sans',sans-serif;font-size:.7rem;padding:.28rem .75rem;border-radius:7px;cursor:pointer;opacity:0;transition:opacity .3s}
+.replay.show{opacity:1}
+
+@media (max-width: 600px) {
+  .logo{font-size:0;}
+  .nav-item{justify-content:center;}
+  .nav-item span {display:none;} /* Assuming labels can be targeted, but we clamped size to 0 */
+  .page-title { font-size: .8rem; }
+  .chip { padding: .2rem .4rem; font-size: .65rem; }
+  .stat { padding: .5rem .4rem; }
+  .stat-val { font-size: 1.1rem; }
+  .stat-lbl { font-size: .5rem; }
+  .stat-sub { font-size: .5rem; }
+  .content-row { gap: .4rem; }
+  .bub { font-size: .65rem; padding: .25rem .45rem; }
+  .panel-head { font-size: .55rem; padding: .4rem; }
+  .appt-item { padding: .3rem .4rem; gap: .3rem; font-size: .65rem; }
+  .ficon { width: 18px; height: 18px; }
+  .flow-item { font-size: .65rem; padding: .3rem .4rem; gap: .4rem; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="browser" id="B">
+
+    <div class="titlebar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="urlbar">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        app.zassist.ai/dashboard
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="sidebar">
+        <div class="logo">ZAssist</div>
+        <div class="nav-item active" id="n-dash"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</div>
+        <div class="nav-item" id="n-chat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Customer Chat</div>
+        <div class="nav-item" id="n-appt"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Appointments</div>
+        <div class="nav-item" id="n-auto"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Automations</div>
+        <div class="nav-item" id="n-ana"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
+      </div>
+
+      <div class="main">
+        <div class="toprow">
+          <div class="page-title">Good morning, Alex 👋</div>
+          <div class="toprow-btns">
+            <div class="chip" id="chip-new">+ New Flow</div>
+            <div class="chip" id="chip-set">⚙ Settings</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat" id="sq"><div class="stat-lbl">Queries Handled</div><div class="stat-val">2,481</div><div class="stat-sub">↑ 18% this week</div></div>
+          <div class="stat" id="sa"><div class="stat-lbl">Appointments Booked</div><div class="stat-val">147</div><div class="stat-sub">↑ 9% this week</div></div>
+          <div class="stat" id="sh"><div class="stat-lbl">Hours Saved</div><div class="stat-val">36h</div><div class="stat-sub">↑ 22% this week</div></div>
+        </div>
+        <div class="content-row">
+          <div class="panel" id="chat-panel">
+            <div class="panel-head"><div class="live-dot"></div>Live Conversations</div>
+            <div class="messages" id="msgs">
+              <div class="msg show"><div class="av u">J</div><div class="bub u">What are your business hours?</div></div>
+              <div class="msg show"><div class="av ai">Z</div><div class="bub ai">Mon–Fri 9am–6pm, Sat 10am–3pm 🕐</div></div>
+            </div>
+            <div class="input-row">
+              <div class="fake-input" id="finput"><span id="ftext"></span></div>
+              <div class="send-btn" id="sbtn"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+            </div>
+          </div>
+          <div class="appt-panel" id="appt-panel">
+            <div class="panel-head">Today's Appointments</div>
+            <div class="appt-list">
+              <div class="appt-item" id="a1"><div class="adot" style="background:#00e8c6"></div><div class="aname">Sarah M.</div><div class="atime">09:00 AM</div><div class="abadge" id="b1">Confirmed</div></div>
+              <div class="appt-item" id="a2"><div class="adot" style="background:#4f72ff"></div><div class="aname">Rajan K.</div><div class="atime">11:30 AM</div><div class="abadge" id="b2">Confirmed</div></div>
+              <div class="appt-item" id="a3"><div class="adot" style="background:#f5c53a"></div><div class="aname">Priya L.</div><div class="atime">02:00 PM</div><div class="abadge" id="b3">Pending</div></div>
+              <div class="appt-item" id="a4"><div class="adot" style="background:#ff5f6d"></div><div class="aname">Tom H.</div><div class="atime">04:30 PM</div><div class="abadge" id="b4">Auto-booked ✓</div></div>
+            </div>
+          </div>
+          <div class="auto-panel" id="auto-panel">
+            <div class="panel-head">Automation Flows</div>
+            <div class="flow-list">
+              <div class="flow-item" id="f1"><div class="ficon" style="background:rgba(0,232,198,.1)"><svg viewBox="0 0 24 24" stroke="var(--accent)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>Auto-reply to FAQs</span><div class="fstatus on">ON</div></div>
+              <div class="flow-item" id="f2"><div class="ficon" style="background:rgba(79,114,255,.1)"><svg viewBox="0 0 24 24" stroke="var(--blue)"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Booking confirmation SMS</span><div class="fstatus on">ON</div></div>
+              <div class="flow-item" id="f3"><div class="ficon" style="background:rgba(245,197,58,.1)"><svg viewBox="0 0 24 24" stroke="var(--gold)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><span>Lead scoring & routing</span><div class="fstatus on">ON</div></div>
+              <div class="flow-item" id="f4"><div class="ficon" style="background:rgba(255,95,109,.1)"><svg viewBox="0 0 24 24" stroke="var(--red)"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></div><span>Missed query alerts</span><div class="fstatus off">OFF</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlays — all absolutely positioned inside #B -->
+    <div class="hring" id="hring"></div>
+    <div class="tip" id="tip"><div class="tip-arr up" id="tarr"></div><span id="tinner"></span></div>
+    <div class="cursor" id="cursor" style="left:80px;top:80px">
+      <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 1 L3 17 L7 13 L10 19 L12 18 L9 12 L15 12 Z" fill="white" stroke="#060a12" stroke-width="1.2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="slabel" id="slabel">Initializing ZAssist demo…</div>
+    <div class="pbar" id="pbar"></div>
+    <button class="replay" id="replay" onclick="startDemo()">↺ Replay</button>
+  </div>
+</div>
+
+<script>
+const B = document.getElementById('B');
+
+// ── Core: get element's rect RELATIVE to #B ──
+function rel(el) {
+  const br = B.getBoundingClientRect();
+  const er = el.getBoundingClientRect();
+  return {
+    left:   er.left - br.left,
+    top:    er.top  - br.top,
+    right:  er.right  - br.left,
+    bottom: er.bottom - br.top,
+    cx:     er.left - br.left + er.width  / 2,
+    cy:     er.top  - br.top  + er.height / 2,
+    w:      er.width,
+    h:      er.height,
+  };
+}
+
+const cur    = document.getElementById('cursor');
+const hring  = document.getElementById('hring');
+const tip    = document.getElementById('tip');
+const tarr   = document.getElementById('tarr');
+const tinner = document.getElementById('tinner');
+const pbar   = document.getElementById('pbar');
+const slabel = document.getElementById('slabel');
+
+// ── CURSOR MOVEMENT ──
+// The cursor tip (top-left of the SVG arrow) is what we position.
+// We set left/top to place the SVG so its tip lands on (tx, ty).
+function moveTo(el, offX = 0, offY = 0) {
+  return new Promise(resolve => {
+    const r = rel(el);
+    const tx = r.cx + offX;
+    const ty = r.cy + offY;
+    cur.style.transition = 'left .52s cubic-bezier(.4,0,.2,1), top .52s cubic-bezier(.4,0,.2,1)';
+    cur.style.left = tx + 'px';
+    cur.style.top  = ty + 'px';
+    setTimeout(resolve, 560);
+  });
+}
+
+function teleport(el, offX = 0, offY = 0) {
+  const r = rel(el);
+  cur.style.transition = 'none';
+  cur.style.left = (r.cx + offX) + 'px';
+  cur.style.top  = (r.cy + offY) + 'px';
+}
+
+function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function doClick() {
+  return new Promise(res => {
+    const ring = document.createElement('div');
+    ring.className = 'click-ring';
+    cur.appendChild(ring);
+    setTimeout(() => { ring.remove(); res(); }, 460);
+  });
+}
+
+// ── HIGHLIGHT RING ──
+function showRing(el, px = 8, py = 8) {
+  const r = rel(el);
+  hring.style.transition = 'none';
+  hring.style.opacity = '0';
+  hring.style.left   = (r.left   - px) + 'px';
+  hring.style.top    = (r.top    - py) + 'px';
+  hring.style.width  = (r.w + px * 2) + 'px';
+  hring.style.height = (r.h + py * 2) + 'px';
+  requestAnimationFrame(() => {
+    hring.style.transition = 'opacity .3s';
+    hring.style.opacity = '1';
+  });
+}
+function hideRing() { hring.style.opacity = '0'; }
+
+// ── TOOLTIP ──
+function showTip(el, html, below = true) {
+  const r = rel(el);
+  tinner.innerHTML = html;
+  tip.style.opacity = '0';
+  tip.style.transform = 'translateY(5px)';
+  tip.classList.remove('show');
+
+  // x: align to element left, clamp within browser
+  let tx = r.left;
+  const tipW = 215;
+  if (tx + tipW > B.offsetWidth - 8) tx = B.offsetWidth - tipW - 8;
+  if (tx < 8) tx = 8;
+
+  // y: below or above
+  const tipH = 80;
+  let ty = below ? r.bottom + 10 : r.top - tipH - 10;
+  if (ty < 8) ty = r.bottom + 10;
+  if (ty + tipH > B.offsetHeight - 8) ty = r.top - tipH - 10;
+
+  tip.style.left = tx + 'px';
+  tip.style.top  = ty + 'px';
+  tarr.className = 'tip-arr ' + (below ? 'up' : 'dn');
+
+  requestAnimationFrame(() => tip.classList.add('show'));
+}
+function hideTip() { tip.classList.remove('show'); }
+
+// ── HELPERS ──
+function glow(id, on = true)  { document.getElementById(id)?.classList.toggle('glow', on); }
+function setNav(id) {
+  ['n-dash','n-chat','n-appt','n-auto','n-ana'].forEach(n =>
+    document.getElementById(n).classList.remove('active','glow')
+  );
+  document.getElementById(id).classList.add('active', 'glow');
+}
+function setLabel(txt) { slabel.innerHTML = txt; }
+function setP(pct) { pbar.style.width = pct + '%'; }
+
+function typeInto(text, speed = 48) {
+  return new Promise(res => {
+    const el = document.getElementById('ftext');
+    el.innerHTML = '<span class="caret"></span>';
+    let i = 0;
+    const t = setInterval(() => {
+      if (i >= text.length) { clearInterval(t); res(); return; }
+      el.innerHTML = text.slice(0, ++i) + '<span class="caret"></span>';
+    }, speed);
+  });
+}
+
+function addMsg(who, text) {
+  return new Promise(res => {
+    const c = document.getElementById('msgs');
+    const m = document.createElement('div');
+    m.className = 'msg' + (who === 'u' ? ' user' : '');
+    m.innerHTML = `<div class="av ${who==='u'?'u':'ai'}">${who==='u'?'J':'Z'}</div><div class="bub ${who==='u'?'u':'ai'}">${text}</div>`;
+    c.appendChild(m);
+    c.scrollTop = c.scrollHeight;
+    requestAnimationFrame(() => { m.classList.add('show'); res(); });
+  });
+}
+function addTyping() {
+  const c = document.getElementById('msgs');
+  const m = document.createElement('div');
+  m.id = 'tdot'; m.className = 'msg show';
+  m.innerHTML = `<div class="av ai">Z</div><div class="bub ai"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+  c.appendChild(m); c.scrollTop = c.scrollHeight;
+}
+function removeTyping() { document.getElementById('tdot')?.remove(); }
+
+// ── RESET ──
+function reset() {
+  document.getElementById('replay').classList.remove('show');
+  hideRing(); hideTip(); setP(0);
+  document.getElementById('ftext').innerHTML = '';
+  document.getElementById('finput').classList.remove('focus');
+  document.getElementById('sbtn').classList.remove('clicked');
+  ['sq','sa','sh','chat-panel','appt-panel'].forEach(id => glow(id, false));
+  ['a1','a2','a3','a4'].forEach(id => glow(id, false));
+  ['b1','b2','b3','b4'].forEach(id => document.getElementById(id)?.classList.remove('show'));
+  glow('chip-new', false);
+  ['f1','f2','f3','f4'].forEach(id => document.getElementById(id)?.classList.remove('show','glow'));
+  document.getElementById('appt-panel').style.display = '';
+  const ap = document.getElementById('auto-panel');
+  ap.classList.remove('on','glow');
+  const msgs = document.getElementById('msgs');
+  while (msgs.children.length > 2) msgs.removeChild(msgs.lastChild);
+  ['n-dash','n-chat','n-appt','n-auto','n-ana'].forEach(n =>
+    document.getElementById(n).classList.remove('active','glow')
+  );
+  document.getElementById('n-dash').classList.add('active');
+}
+
+// ── MAIN DEMO ──
+async function startDemo() {
+  reset();
+
+  // Teleport cursor to dashboard nav (no animation on start)
+  teleport(document.getElementById('n-dash'), 30, 0);
+  await wait(600);
+
+  // 1. Stats — Queries
+  setLabel('📊 Dashboard Overview'); setP(8);
+  await moveTo(document.getElementById('sq'));
+  showRing(document.getElementById('sq'));
+  glow('sq');
+  showTip(document.getElementById('sq'), '<b>Queries Handled</b>ZAssist resolves FAQs instantly — no human needed, 24/7.', true);
+  await wait(2300); hideTip(); hideRing(); glow('sq', false);
+
+  // 2. Stats — Appointments
+  setLabel('📅 Appointments Metric'); setP(18);
+  await moveTo(document.getElementById('sa'));
+  showRing(document.getElementById('sa'));
+  glow('sa');
+  showTip(document.getElementById('sa'), '<b>Appointments Booked</b>Customers book directly in chat — synced with your calendar instantly.', true);
+  await wait(2300); hideTip(); hideRing(); glow('sa', false);
+
+  // 3. Stats — Hours saved
+  setLabel('⏱ Hours Saved Metric'); setP(26);
+  await moveTo(document.getElementById('sh'));
+  showRing(document.getElementById('sh'));
+  glow('sh');
+  showTip(document.getElementById('sh'), '<b>Hours Saved</b>Every automated task = time back in your hands, tracked weekly.', true);
+  await wait(2300); hideTip(); hideRing(); glow('sh', false);
+
+  // 4. Navigate → Chat
+  setLabel('💬 Navigating to Customer Chat'); setP(35);
+  await moveTo(document.getElementById('n-chat'), 30, 0);
+  await doClick();
+  setNav('n-chat');
+  await wait(400);
+
+  // 5. Chat panel highlight
+  setLabel('💬 Feature — Instant AI Replies'); setP(44);
+  await moveTo(document.getElementById('chat-panel'), 0, -40);
+  showRing(document.getElementById('chat-panel'), 10, 10);
+  document.getElementById('chat-panel').classList.add('glow');
+  showTip(document.getElementById('chat-panel'), '<b>Live Conversations</b>ZAssist replies in real-time. Handles FAQs, bookings & support queries.', false);
+  await wait(2100); hideTip();
+
+  // 6. Type in chat
+  setLabel('⌨️ Customer sends a message…'); setP(50);
+  await moveTo(document.getElementById('finput'), -20, 0);
+  await doClick();
+  document.getElementById('finput').classList.add('focus');
+  await wait(300);
+  await typeInto('Book me a slot for tomorrow at 11am', 46);
+  await wait(400);
+
+  // 7. Click send
+  await moveTo(document.getElementById('sbtn'), 0, 0);
+  await doClick();
+  document.getElementById('sbtn').classList.add('clicked');
+  document.getElementById('ftext').innerHTML = '';
+  document.getElementById('finput').classList.remove('focus');
+  document.getElementById('finput').innerHTML = '<span id="ftext"></span>';
+  await addMsg('u', 'Book me a slot for tomorrow at 11am');
+  await wait(600);
+  addTyping(); await wait(1400); removeTyping();
+  await addMsg('ai', '✅ Done! Booked for tomorrow at 11:00 AM. Confirmation SMS sent!');
+  await wait(400);
+  hideRing(); document.getElementById('chat-panel').classList.remove('glow');
+
+  // 8. Navigate → Appointments
+  setLabel('📅 Navigating to Appointments'); setP(57);
+  await moveTo(document.getElementById('n-appt'), 30, 0);
+  await doClick();
+  setNav('n-appt');
+  await wait(300);
+
+  showRing(document.getElementById('appt-panel'), 10, 10);
+  document.getElementById('appt-panel').classList.add('glow');
+  showTip(document.getElementById('appt-panel'), '<b>Smart Scheduling</b>All bookings in one place — auto-synced, reminders sent automatically.', false);
+  await wait(2100); hideTip();
+
+  // hover each appointment
+  for (const [aid, bid] of [['a1','b1'],['a2','b2'],['a3','b3'],['a4','b4']]) {
+    await moveTo(document.getElementById(aid), 0, 0);
+    glow(aid);
+    document.getElementById(bid).classList.add('show');
+    await wait(520); glow(aid, false);
+  }
+  hideRing(); document.getElementById('appt-panel').classList.remove('glow');
+
+  // 9. Navigate → Automations
+  setLabel('⚡ Navigating to Automations'); setP(70);
+  await moveTo(document.getElementById('n-auto'), 30, 0);
+  await doClick();
+  setNav('n-auto');
+  await wait(300);
+
+  document.getElementById('appt-panel').style.display = 'none';
+  const ap = document.getElementById('auto-panel');
+  ap.classList.add('on');
+  ['f1','f2','f3','f4'].forEach((id, i) =>
+    setTimeout(() => document.getElementById(id)?.classList.add('show'), i * 180)
+  );
+  await wait(900);
+
+  showRing(ap, 10, 10);
+  ap.classList.add('glow');
+  showTip(ap, '<b>Automation Flows</b>Set rules once — ZAssist handles replies, reminders & lead routing forever.', false);
+  await wait(2100); hideTip();
+
+  for (const id of ['f1','f2','f3','f4']) {
+    await moveTo(document.getElementById(id), 0, 0);
+    document.getElementById(id).classList.add('glow');
+    await wait(480);
+    document.getElementById(id).classList.remove('glow');
+  }
+  hideRing(); ap.classList.remove('glow');
+
+  // 10. New Flow button
+  setLabel('✨ Create a New Automation Flow'); setP(82);
+  await moveTo(document.getElementById('chip-new'), 0, 0);
+  showRing(document.getElementById('chip-new'), 6, 5);
+  glow('chip-new');
+  await doClick();
+  showTip(document.getElementById('chip-new'), '<b>New Flow</b>Build automations without code — triggered by messages, time or events.', true);
+  await wait(2400); hideTip(); hideRing(); glow('chip-new', false);
+
+  // 11. Analytics
+  setLabel('📈 Analytics — Track Everything'); setP(92);
+  await moveTo(document.getElementById('n-ana'), 30, 0);
+  await doClick();
+  setNav('n-ana');
+  showRing(document.getElementById('n-ana'), 10, 7);
+  showTip(document.getElementById('n-ana'), '<b>Analytics</b>Resolution rates, peak hours & agent stats — weekly digest included.', true);
+  await wait(2400); hideTip(); hideRing();
+
+  // back to dash
+  setNav('n-dash');
+  await moveTo(document.getElementById('n-dash'), 30, 0);
+  await wait(300);
+
+  // Done
+  setP(100);
+  setLabel('✅ <em>ZAssist</em> — Always On. Always Helpful.');
+  await moveTo(document.getElementById('sa'), 0, 0);
+  showRing(document.getElementById('sq'), 20, 80);
+  showTip(document.getElementById('sa'), '<b>That\'s ZAssist ✦</b>Queries ✓  Appointments ✓  Automations ✓<br>You focus on growth — ZAssist handles the rest.', true);
+  await wait(3500); hideTip(); hideRing();
+
+  document.getElementById('replay').classList.add('show');
+}
+
+window.addEventListener('load', () => setTimeout(startDemo, 700));
+</script>
+</body>
+</html>
