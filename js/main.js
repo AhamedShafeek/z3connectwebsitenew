@@ -214,66 +214,66 @@ document.addEventListener('DOMContentLoaded', () => {
     wordRevealContainers.forEach(el => wordObserver.observe(el));
   }
 
-  // --- Cyclic Process Auto-Advance ---
+  // --- Scroll-Driven Process Cycle ---
   const cycleProcess = document.getElementById('cycle-process');
 
   if (cycleProcess) {
     const steps = cycleProcess.querySelectorAll('.cycle-step');
     const totalSteps = steps.length;
     let currentStep = 0;
-    let cycleInterval = null;
-    let isPaused = false;
-
 
     function setActiveStep(index) {
+      if (index === currentStep) return;
+      
       // Remove active from all
       steps.forEach(s => s.classList.remove('active'));
       const activeNodes = cycleProcess.querySelectorAll('.cycle-node');
       activeNodes.forEach(n => n.classList.remove('active'));
 
       // Set new active
-      currentStep = index % totalSteps;
-      steps[currentStep].classList.add('active');
+      currentStep = index;
+      if (steps[currentStep]) steps[currentStep].classList.add('active');
 
       // Update Graphic Nodes
       const curNode = cycleProcess.querySelector(`.node-${currentStep}`);
       if (curNode) curNode.classList.add('active');
     }
 
-    function startCycle() {
-      if (cycleInterval) clearInterval(cycleInterval);
-      cycleInterval = setInterval(() => {
-        if (!isPaused) {
-          setActiveStep(currentStep + 1);
-        }
-      }, 3000);
+    // Scroll-driven logic: use sticky-like calculation
+    // We update the active step based on scroll position within the section
+    function handleCycleScroll() {
+      const rect = cycleProcess.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      
+      // Calculate progress (0 to 1) based on center of viewport passing through section
+      // Section is roughly 800-1000px high
+      const sectionCenter = rect.top + (rect.height / 2);
+      const viewportCenter = viewportHeight / 2;
+      
+      // If section is in view
+      if (rect.top < viewportHeight && rect.bottom > 0) {
+        // Map 0 -> 1 based on section top nearing center to section bottom nearing center
+        let progress = (viewportCenter - rect.top) / rect.height;
+        progress = Math.max(0, Math.min(0.99, progress));
+        
+        const stepIndex = Math.floor(progress * totalSteps);
+        setActiveStep(stepIndex);
+      }
     }
 
-    // Click to select step
+    window.addEventListener('scroll', () => {
+      requestAnimationFrame(handleCycleScroll);
+    }, { passive: true });
+
+    // Click to select step manually
     steps.forEach((step, i) => {
       step.addEventListener('click', () => {
         setActiveStep(i);
-        // Reset timer on click
-        startCycle();
       });
     });
 
-    // Pause on hover
-    cycleProcess.addEventListener('mouseenter', () => { isPaused = true; });
-    cycleProcess.addEventListener('mouseleave', () => { isPaused = false; });
-
-    // Start only when visible
-    const cycleObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveStep(0);
-          startCycle();
-          cycleObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    cycleObserver.observe(cycleProcess);
+    // Initial check
+    handleCycleScroll();
   }
 
   // Initial call
