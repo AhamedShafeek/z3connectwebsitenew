@@ -1,6 +1,24 @@
 User-agent: *
 Allow: /
+Disallow: /fix_seo_batch.py
+Disallow: /build_work.py
+Disallow: /generate_case_studies_v3.py
+Disallow: /fix_links.py
+Disallow: /fix_nav_links.py
+Disallow: /inject_svg.py
+Disallow: /optimise_html.py
+Disallow: /scrub_vlogs.py
+Disallow: /update_favicon.py
+Disallow: /*.py
+Disallow: /*.tmp
+Disallow: /*demo*
+Disallow: /z3connect_vector_animation1.html
+Disallow: /cards_partial.html
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Primary Sitemap
 Sitemap: https://z3connect.com/sitemap.xml
 
-# Z3Connect — AI-driven software for businesses
+# Z3Connect — AI-driven software development company, Nagercoil, Tamil Nadu

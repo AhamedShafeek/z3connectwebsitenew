@@ -5,6 +5,9 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-DNS-Prefetch-Control: on
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://api.fontshare.com; font-src 'self' https://fonts.gstatic.com https://api.fontshare.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://wa.me; object-src 'none'; base-uri 'self';
 
 /css/*
   Cache-Control: public, immutable, max-age=31536000
@@ -13,7 +16,7 @@
   Cache-Control: public, immutable, max-age=31536000
 
 /image/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
 /fonts/*
   Cache-Control: public, immutable, max-age=31536000
@@ -24,23 +27,16 @@
 /*.woff2
   Cache-Control: public, immutable, max-age=31536000
 
-/index.html
-  Cache-Control: public, max-age=0, must-revalidate
+/sitemap.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/xml
 
-/about.html
-  Cache-Control: public, max-age=0, must-revalidate
+/robots.txt
+  Cache-Control: public, max-age=86400
 
-/products.html
-  Cache-Control: public, max-age=0, must-revalidate
+/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
 
-/portfolio.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-/work.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-/contact.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-/404.html
+/*.html
   Cache-Control: public, max-age=0, must-revalidate

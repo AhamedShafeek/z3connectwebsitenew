@@ -4170,6 +4170,7 @@ select.glass-input option {
   font-weight: 700;
   background: linear-gradient(135deg, #60A5FA, #A78BFA);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
 }
@@ -4178,7 +4179,7 @@ select.glass-input option {
   font-weight: 600;
   color: white;
   text-transform: uppercase;
-  tracking: 0.1em;
+  letter-spacing: 0.1em;
   margin-bottom: 15px;
 }
 .metric-detail {
@@ -4241,5 +4242,109 @@ select.glass-input option {
   color: rgba(255,255,255,0.5);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* ============================================
+   BREADCRUMBS
+   ============================================ */
+.breadcrumb-nav {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: relative;
+  z-index: 10;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: '/';
+  margin-left: var(--space-2);
+  opacity: 0.5;
+}
+
+.breadcrumb-list a:hover {
+  color: var(--primary-blue);
+}
+
+.breadcrumb-list li[aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+.faq-accordion {
+  max-width: 800px;
+  margin: var(--space-12) auto 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-6) 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: var(--primary-blue);
+}
+
+.faq-question svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s var(--ease-out-expo);
+  opacity: 0.5;
+}
+
+.faq-item.active .faq-question svg {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out-expo), padding 0.4s;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: var(--space-6);
+}
+
+/* ============================================
+   GEO CONTENT STYLING
+   ============================================ */
+.geo-description {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.geo-description strong {
+  color: var(--primary-blue);
+  font-weight: 600;
 }
 
