@@ -36,11 +36,15 @@ html, body {
   font-family: var(--font);
   color: var(--text);
   overflow: hidden;
+  margin: 0; padding: 0;
+}
+body {
+  transform-origin: top left;
 }
 
 /* ─── SCENE ────────────────────────────────────────── */
 #scene {
-  width: 100dvw; height: 100dvh;
+  width: 100%; height: 100%;
   display: flex; flex-direction: column;
 }
 
@@ -451,6 +455,9 @@ html, body {
   border-radius:20px;border:1px solid var(--border2);color:var(--text3);
 }
 </style>
+  <link rel="icon" href="image/icon/faviicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/icon/faviicon.png">
+
 </head>
 <body>
 
@@ -691,10 +698,32 @@ let demoRunning = false;
 function setProgress(step, total, label) {
   lbi.style.width = ((step / total) * 100) + '%';
   for (let i = 0; i < 6; i++) {
-    $('pd-' + i).className = 'prog-dot' + (i < step ? ' done' : i === step ? ' active' : '');
+    const d = $('pd-' + i);
+    if(d) d.className = 'prog-dot' + (i < step ? ' done' : i === step ? ' active' : '');
   }
-  $('prog-label').textContent = label;
+  const pl = $('prog-label');
+  if(pl) pl.textContent = label;
 }
+
+// ── VIRTUAL VIEWPORT SCALING ──
+let simScale = 1;
+function applyScale() {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  if (w < 900) {
+    simScale = w / 900;
+    document.body.style.width = '900px';
+    document.body.style.height = (h / simScale) + 'px';
+    document.body.style.transform = `scale(${simScale})`;
+  } else {
+    simScale = 1;
+    document.body.style.width = '100%';
+    document.body.style.height = '100%';
+    document.body.style.transform = 'none';
+  }
+}
+window.addEventListener('resize', applyScale);
+applyScale();
 
 function moveCursor(x, y, dur = 640) {
   return new Promise(r => {
@@ -720,8 +749,8 @@ async function clickAt(x, y) {
 function highlightEl(el, color = 'rgba(167,139,250,0.6)') {
   const r = el.getBoundingClientRect(), p = 6;
   Object.assign(ring.style, {
-    left: (r.left - p) + 'px', top: (r.top - p) + 'px',
-    width: (r.width + p*2) + 'px', height: (r.height + p*2) + 'px',
+    left: ((r.left / simScale) - p) + 'px', top: ((r.top / simScale) - p) + 'px',
+    width: ((r.width / simScale) + p*2) + 'px', height: ((r.height / simScale) + p*2) + 'px',
     borderColor: color
   });
   ring.classList.add('show');
@@ -741,15 +770,15 @@ function showCallout(tag, title, body, anchorEl) {
   const r = anchorEl.getBoundingClientRect();
 
   const sides = [
-    { side:'bottom', space: vh - r.bottom, x: r.left,        y: r.bottom + pad, arrow:'top'    },
-    { side:'top',    space: r.top,          x: r.left,        y: r.top - ch - pad, arrow:'bottom' },
-    { side:'right',  space: vw - r.right,   x: r.right + pad, y: r.top,          arrow:'left'   },
-    { side:'left',   space: r.left,         x: r.left - cw - pad, y: r.top,      arrow:'right'  },
+    { side:'bottom', space: vh - r.bottom, x: r.left / simScale,        y: (r.bottom / simScale) + pad, arrow:'top'    },
+    { side:'top',    space: r.top,          x: r.left / simScale,        y: (r.top / simScale) - ch - pad, arrow:'bottom' },
+    { side:'right',  space: vw - r.right,   x: (r.right / simScale) + pad, y: (r.top / simScale),          arrow:'left'   },
+    { side:'left',   space: r.left,         x: (r.left / simScale) - cw - pad, y: (r.top / simScale),      arrow:'right'  },
   ];
   const best = sides.reduce((a, b) => b.space > a.space ? b : a);
 
-  let x = Math.max(pad, Math.min(vw - cw - pad, best.x));
-  let y = Math.max(pad, Math.min(vh - ch - pad, best.y));
+  let x = Math.max(pad, Math.min((vw / simScale) - cw - pad, best.x));
+  let y = Math.max(pad, Math.min((vh / simScale) - ch - pad, best.y));
 
   callout.style.left  = x + 'px';
   callout.style.top   = y + 'px';
@@ -784,7 +813,7 @@ async function setCardStatus(id, status) {
 
 function elCenter(id) {
   const r = $(id).getBoundingClientRect();
-  return { x: r.left + r.width/2, y: r.top + r.height/2 };
+  return { x: (r.left + r.width/2)/simScale, y: (r.top + r.height/2)/simScale };
 }
 
 // ─── DEMO ────────────────────────────────────────────

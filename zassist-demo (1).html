@@ -12,10 +12,11 @@
   --border:rgba(255,255,255,0.07); --accent:#00e8c6; --blue:#4f72ff;
   --gold:#f5c53a; --red:#ff5f6d; --text:#dde4f0; --muted:#4f607e;
 }
-html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:'DM Sans',sans-serif;color:var(--text)}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:'DM Sans',sans-serif;color:var(--text);margin:0;padding:0;}
+body{transform-origin:top left;}
 
 .shell{
-  width:100vw;height:100vh;position:relative;
+  width:100%;height:100%;position:relative;
   background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(79,114,255,0.08) 0%,transparent 70%);
 }
 .shell::after{
@@ -25,8 +26,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-famil
 
 /* ── BROWSER — natively responsive ── */
 .browser{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background:var(--surface);
   box-shadow:none;
   display:flex;flex-direction:column;
@@ -162,6 +163,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-famil
   .flow-item { font-size: .65rem; padding: .3rem .4rem; gap: .4rem; }
 }
 </style>
+  <link rel="icon" href="image/icon/faviicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="image/icon/faviicon.png">
+
 </head>
 <body>
 <div class="shell">
@@ -249,19 +253,39 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-famil
 <script>
 const B = document.getElementById('B');
 
+// ── VIRTUAL VIEWPORT SCALING ──
+let simScale = 1;
+function applyScale() {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  if (w < 900) {
+    simScale = w / 900;
+    document.body.style.width = '900px';
+    document.body.style.height = (h / simScale) + 'px';
+    document.body.style.transform = `scale(${simScale})`;
+  } else {
+    simScale = 1;
+    document.body.style.width = '100%';
+    document.body.style.height = '100%';
+    document.body.style.transform = 'none';
+  }
+}
+window.addEventListener('resize', applyScale);
+applyScale();
+
 // ── Core: get element's rect RELATIVE to #B ──
 function rel(el) {
   const br = B.getBoundingClientRect();
   const er = el.getBoundingClientRect();
   return {
-    left:   er.left - br.left,
-    top:    er.top  - br.top,
-    right:  er.right  - br.left,
-    bottom: er.bottom - br.top,
-    cx:     er.left - br.left + er.width  / 2,
-    cy:     er.top  - br.top  + er.height / 2,
-    w:      er.width,
-    h:      er.height,
+    left:   (er.left - br.left) / simScale,
+    top:    (er.top  - br.top) / simScale,
+    right:  (er.right  - br.left) / simScale,
+    bottom: (er.bottom - br.top) / simScale,
+    cx:     (er.left - br.left + er.width  / 2) / simScale,
+    cy:     (er.top  - br.top  + er.height / 2) / simScale,
+    w:      er.width / simScale,
+    h:      er.height / simScale,
   };
 }
 
