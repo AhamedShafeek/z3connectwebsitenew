@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# React Sub-project (Handled separately)
+z3connect-react/
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
