@@ -1,0 +1,204 @@
+﻿File: 404.html
+  Title: Page Not Found ù Z3Connect
+  Desc: MISSING...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: about.html
+  Title: About Z3Connect ù AI Software Company in Nagercoil, Tamil Nadu
+  Desc: Z3Connect is an AI-driven software development com...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: blogs.html
+  Title: Blogs ù AI, Business Automation & Software Insights | Z3Connect
+  Desc: Read Z3Connect's blogs on AI automation, business ...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: cards_partial.html
+  Title: MISSING
+  Desc: MISSING...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: case-studies.html
+  Title: Case Studies ù Real Software Results for Real Businesses | Z3Connect
+  Desc: Read detailed case studies showing how Z3Connect's...
+  Schemas: 3
+  Missing Alts: 0
+--------------------
+File: case-study-atom-infra.html
+  Title: Atom Infra Case Study ù Construction & Infrastructure Software by Z3Connect
+  Desc: How Z3Connect helped Atom Infra in the Constructio...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-crazy-coconut.html
+  Title: Crazy Coconut Case Study ù F&B / Restaurant Software by Z3Connect
+  Desc: How Z3Connect helped Crazy Coconut in the F&B / Re...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-faam.html
+  Title: FAAM Design Case Study ù Design & Creative Agency Software by Z3Connect
+  Desc: How Z3Connect helped FAAM Design in the Design & C...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-femmic.html
+  Title: Femmic Case Study ù Healthcare & Wellness Software by Z3Connect
+  Desc: How Z3Connect helped Femmic in the Healthcare & We...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-iqrah-academy.html
+  Title: Iqrah Academy Case Study ù Education Software by Z3Connect
+  Desc: How Z3Connect helped Iqrah Academy in the Educatio...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-lam-stacks.html
+  Title: Lam Stacks Case Study ù Technology Software by Z3Connect
+  Desc: How Z3Connect helped Lam Stacks in the Technology ...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-meta-giants.html
+  Title: Meta Giants Case Study ù HR & Payroll Software by Z3Connect
+  Desc: How Z3Connect helped Meta Giants in the HR & Payro...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-mwi-groups.html
+  Title: MWI Groups Case Study ù Real Estate & Construction Software by Z3Connect
+  Desc: How Z3Connect helped MWI Groups in the Real Estate...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-pd-turbo-tech.html
+  Title: PD Turbo Tech Case Study ù Automotive Software by Z3Connect
+  Desc: How Z3Connect helped PD Turbo Tech in the Automoti...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study-pocket-delivery.html
+  Title: Pocket Delivery Case Study ù Logistics & Delivery Software by Z3Connect
+  Desc: How Z3Connect helped Pocket Delivery in the Logist...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: case-study.html
+  Title: Case Study - Z3Connect
+  Desc: Z3Connect Case Study - We build automation tools f...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: clients.html
+  Title: Clients ù 100+ Businesses Powered by Z3Connect | Tamil Nadu
+  Desc: Z3Connect has powered 100+ businesses across 15 in...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: contact.html
+  Title: Contact Z3Connect ù Get a Free Quote | Custom Software Development
+  Desc: Contact Z3Connect for custom software development,...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: content-flow-demo (1).html
+  Title: ContentFlow ù Product Demo
+  Desc: MISSING...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: content-flow.html
+  Title: ContentFlow AI ù Automated Content Marketing Platform | Z3Connect
+  Desc: ContentFlow AI by Z3Connect automates your entire ...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: founder.html
+  Title: Ahamed Shafeek ù Founder & CEO of Z3Connect | Software Entrepreneur
+  Desc: Ahamed Shafeek is the Founder and CEO of Z3Connect...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: get-quote.html
+  Title: Get a Free Quote ù Custom Software Development | Z3Connect
+  Desc: Get a free custom software development quote from ...
+  Schemas: 4
+  Missing Alts: 0
+--------------------
+File: index.html
+  Title: Z3Connect ù AI-Powered Software That Runs Businesses | Nagercoil, Tamil Nadu
+  Desc: Z3Connect builds AI-powered software, POS systems,...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: philosophy.html
+  Title: Our Philosophy ù How Z3Connect Builds Software | Engineering Mindset
+  Desc: Discover Z3Connect's engineering philosophy: ship ...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: portfolio.html
+  Title: Portfolio ù Z3Connect Software Projects & Work
+  Desc: Explore Z3Connect's featured software projects. Cu...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: privacy-policy.html
+  Title: Privacy Policy ù Z3Connect Data Protection & User Rights
+  Desc: Read Z3Connect's privacy policy to understand how ...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: products.html
+  Title: Products ù POS, CRM, SaaS & AI Automation Software | Z3Connect
+  Desc: Explore Z3Connect's complete software suite: POS b...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: solutions-detailed.html
+  Title: Industry Solutions ù Healthcare, Retail, F&B, Education Software | Z3Connect
+  Desc: Z3Connect delivers industry-specific software solu...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: team.html
+  Title: Team ù Meet the Engineers Behind Z3Connect | Tamil Nadu
+  Desc: Meet the talented engineers, designers, and produc...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: terms.html
+  Title: Terms of Service ù Z3Connect Software Usage Agreement
+  Desc: Read Z3Connect's terms of service covering softwar...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: why-we-exist.html
+  Title: Why We Exist ù Z3Connect's Mission to Digitize Indian MSMEs
+  Desc: Z3Connect exists to give every small and medium bu...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: work.html
+  Title: Portfolio ù 120+ Software Projects Delivered | Z3Connect
+  Desc: Browse Z3Connect's portfolio of 120+ delivered sof...
+  Schemas: 1
+  Missing Alts: 0
+--------------------
+File: z3connect_vector_animation1.html
+  Title: Draw Then Fill
+  Desc: MISSING...
+  Schemas: 0
+  Missing Alts: 0
+--------------------
+File: zassist-demo (1).html
+  Title: ZAssist ù Product Preview
+  Desc: MISSING...
+  Schemas: 0
+  Missing Alts: 0
+--------------------

@@ -3,10 +3,13 @@
 # Redirect www to non-www (canonical domain)
 https://www.z3connect.com/* https://z3connect.com/:splat 301!
 
-# Redirect /home to homepage
-/home /index.html 301
-
-# Legacy URL redirects
-/vlogs /blogs.html 301
-/vlogs.html /blogs.html 301
+# Hybrid Routing: Redirect static paths to React app where needed
+/vlogs /blogs 301
+/vlogs.html /blogs 301
+/contact.html /contact 301
 /portfolio.html /work.html 301
+
+# SPA Fallback for React (Blogs/Contact)
+/blogs/* /blogs 200
+/contact/* /contact 200
+/admin/* /admin 200
