@@ -3,11 +3,38 @@
 # Redirect www to non-www (canonical domain)
 https://www.z3connect.com/* https://z3connect.com/:splat 301!
 
-# Hybrid Routing: Redirect static paths to React app where needed
-/vlogs /blogs 301
-/vlogs.html /blogs 301
-/contact.html /contact 301
-/portfolio.html /work.html 301
+# Clean URL redirects (.html -> no extension) - resolves internal 3xx chains
+/index.html / 301!
+/about.html /about 301!
+/team.html /team 301!
+/founder.html /founder 301!
+/philosophy.html /philosophy 301!
+/why-we-exist.html /why-we-exist 301!
+/products.html /products 301!
+/solutions-detailed.html /solutions 301!
+/work.html /work 301!
+/case-studies.html /case-studies 301!
+/clients.html /clients 301!
+/get-quote.html /get-quote 301!
+/privacy-policy.html /privacy-policy 301!
+/terms.html /terms 301!
+/blogs.html /blogs 301!
+/contact.html /contact 301!
+/portfolio.html /work 301!
+/vlogs /blogs 301!
+/vlogs.html /blogs 301!
+
+# Case study clean URLs
+/case-study-atom-infra.html /case-study-atom-infra 301!
+/case-study-crazy-coconut.html /case-study-crazy-coconut 301!
+/case-study-faam.html /case-study-faam 301!
+/case-study-femmic.html /case-study-femmic 301!
+/case-study-iqrah-academy.html /case-study-iqrah-academy 301!
+/case-study-lam-stacks.html /case-study-lam-stacks 301!
+/case-study-meta-giants.html /case-study-meta-giants 301!
+/case-study-mwi-groups.html /case-study-mwi-groups 301!
+/case-study-pd-turbo-tech.html /case-study-pd-turbo-tech 301!
+/case-study-pocket-delivery.html /case-study-pocket-delivery 301!
 
 # SPA Fallback for React (Blogs/Contact)
 /blogs/* /blogs 200

@@ -1,19 +1,22 @@
 User-agent: *
 Allow: /
-Disallow: /fix_seo_batch.py
-Disallow: /build_work.py
-Disallow: /generate_case_studies_v3.py
-Disallow: /fix_links.py
-Disallow: /fix_nav_links.py
-Disallow: /inject_svg.py
-Disallow: /optimise_html.py
-Disallow: /scrub_vlogs.py
-Disallow: /update_favicon.py
+
+# Block server-side scripts and internal utilities from crawlers
 Disallow: /*.py
 Disallow: /*.tmp
+Disallow: /*.json$
+Disallow: /admin
+Disallow: /admin/*
+
+# Block partial/demo template files (not meant for indexing)
 Disallow: /*demo*
-Disallow: /z3connect_vector_animation1.html
-Disallow: /cards_partial.html
+Disallow: /cards-partial.html
+Disallow: /z3connect-vector-animation1.html
+
+# Allow important assets explicitly
+Allow: /manifest.json
+Allow: /sitemap.xml
+Allow: /robots.txt
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

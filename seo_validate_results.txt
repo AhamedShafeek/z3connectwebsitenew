@@ -1,0 +1,17 @@
+﻿
+=== 14 remaining issues ===
+
+  [MISSING META DESC] 404.html
+  [MISSING CANONICAL] 404.html
+  [.html CANONICAL] case-study-atom-infra.html: https://z3connect.com/case-study-atom-infra.html
+  [.html CANONICAL] case-study-crazy-coconut.html: https://z3connect.com/case-study-crazy-coconut.html
+  [.html CANONICAL] case-study-faam.html: https://z3connect.com/case-study-faam.html
+  [.html CANONICAL] case-study-femmic.html: https://z3connect.com/case-study-femmic.html
+  [.html CANONICAL] case-study-iqrah-academy.html: https://z3connect.com/case-study-iqrah-academy.html
+  [.html CANONICAL] case-study-lam-stacks.html: https://z3connect.com/case-study-lam-stacks.html
+  [.html CANONICAL] case-study-meta-giants.html: https://z3connect.com/case-study-meta-giants.html
+  [.html CANONICAL] case-study-mwi-groups.html: https://z3connect.com/case-study-mwi-groups.html
+  [.html CANONICAL] case-study-pd-turbo-tech.html: https://z3connect.com/case-study-pd-turbo-tech.html
+  [.html CANONICAL] case-study-pocket-delivery.html: https://z3connect.com/case-study-pocket-delivery.html
+  [MISSING CANONICAL] case-study.html
+  [.html CANONICAL] content-flow.html: https://z3connect.com/content-flow.html
