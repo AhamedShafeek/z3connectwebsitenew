@@ -4374,6 +4374,13 @@ select.glass-input option {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .seo-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+}
+
 .seo-card::before {
   content: "";
   position: absolute;
@@ -4441,4 +4448,58 @@ select.glass-input option {
   border-radius: 40px;
   transform: rotate(15deg);
   z-index: -1;
+}
+
+/* ============================================
+   GLOBAL MOBILE OVERRIDES (UI FIXES)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Fix edge-to-edge text and missing paddings */
+  .container, section, .section, .section-padding {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  /* Optimize card spacing & visibility */
+  .seo-card, .case-card {
+    padding: 28px 24px !important;
+    border-radius: 24px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Better card definition */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+  }
+  
+  .case-card-inner {
+    padding: 32px 24px !important;
+    min-height: 420px !important;
+  }
+
+  /* Improve typography */
+  h1 { font-size: 2.8rem !important; }
+  h2 { font-size: 2.1rem !important; line-height: 1.2 !important; margin-bottom: 24px !important; }
+  h3 { font-size: 1.5rem !important; margin-bottom: 16px !important; }
+  p { font-size: 1rem !important; line-height: 1.6 !important; }
+  
+  /* Prevent header overlap when navigating via hash links */
+  html { scroll-padding-top: 100px; }
+  
+  /* Marquee breathing room on mobile */
+  .mq-wrap {
+    margin: 48px 0;
+    padding: 16px 0;
+  }
+
+  .seo-bento-grid {
+    gap: 20px;
+    margin-top: 40px;
+  }
+}
+
+/* Specific Fix for Very Narrow Screens (e.g., iPhone SE) */
+@media (max-width: 400px) {
+  .container, section, .section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  h2 { font-size: 1.8rem !important; }
 }
