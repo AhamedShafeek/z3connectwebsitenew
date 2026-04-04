@@ -413,6 +413,10 @@ ol {
   color: var(--black) !important;
 }
 
+.floating-nav.nav-light .nav-hamburger svg {
+  stroke: var(--black) !important;
+}
+
 /* --- Nav Item with Dropdown --- */
 .nav-item {
   position: relative;
